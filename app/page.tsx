@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+
   // Close mobile menu when screen size changes to desktop
   useEffect(() => {
     const handleResize = () => {
@@ -13,7 +13,7 @@ export default function Home() {
         setIsMenuOpen(false);
       }
     };
-    
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [isMenuOpen]);
@@ -27,7 +27,7 @@ export default function Home() {
             <div className="h-8 w-8 rounded-full" style={{ backgroundColor: '#0674B4' }}></div>
             <span className="font-bold text-2xl" style={{ color: '#0674B4' }}>Flow</span>
           </div>
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="/entrepreneurs" className="text-gray-700 hover:text-blue-600 transition-colors">
@@ -43,9 +43,9 @@ export default function Home() {
               Download App
             </Link>
           </nav>
-          
+
           {/* Mobile menu button */}
-          <button 
+          <button
             className="md:hidden text-gray-700 focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -60,7 +60,7 @@ export default function Home() {
             )}
           </button>
         </div>
-        
+
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="md:hidden bg-white border-t border-gray-200 p-4">
@@ -102,14 +102,14 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            
+
             {/* Modified hero image - better on mobile */}
             <div className="w-full lg:w-1/2">
               <div className="relative mx-auto max-w-md">
                 {/* Mobile-friendly hero illustration */}
                 <div className="hidden sm:block absolute -z-10 -top-4 -left-4 w-64 h-64 rounded-full opacity-20" style={{ backgroundColor: '#0674B4' }}></div>
                 <div className="hidden sm:block absolute -z-10 -bottom-8 -right-8 w-48 h-48 rounded-full opacity-20" style={{ backgroundColor: '#0674B4' }}></div>
-                
+
                 {/* App mockup - simplified for mobile */}
                 <div className="relative bg-white rounded-xl shadow-lg overflow-hidden">
                   <div className="h-16 flex items-center px-6" style={{ backgroundColor: '#0674B4' }}>
@@ -151,7 +151,7 @@ export default function Home() {
               Our platform streamlines the connection between entrepreneurs and investors through a simple, effective process.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {[
               {
@@ -191,7 +191,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          
+
           {/* Additional feature content */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -235,75 +235,96 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="py-16 md:py-24 w-full text-white bg-gradient-to-br from-[#0674B4] to-blue-900">
+  <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+    <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <div className="space-y-8">
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Ready to transform your ideas into reality?</h2>
+          <div className="h-1 w-16 bg-blue-300 mt-4"></div>
+        </div>
 
-      {/* CTA Section - Expanded */}
-      <section className="py-20 w-full text-white" style={{ backgroundColor: '#0674B4' }}>
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to transform your ideas into reality?</h2>
-              <p className="text-blue-100 mb-8 text-lg">
-                Join thousands of entrepreneurs and investors already using our platform to connect, collaborate, and create successful ventures.
-              </p>
-              
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-                  <h4 className="font-semibold text-xl mb-1">5,000+</h4>
-                  <p className="text-blue-100">Active Entrepreneurs</p>
-                </div>
-                <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-                  <h4 className="font-semibold text-xl mb-1">$100M+</h4>
-                  <p className="text-blue-100">Investment Facilitated</p>
-                </div>
-                <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-                  <h4 className="font-semibold text-xl mb-1">1,200+</h4>
-                  <p className="text-blue-100">Investor Network</p>
-                </div>
-                <div className="bg-white bg-opacity-10 p-4 rounded-lg">
-                  <h4 className="font-semibold text-xl mb-1">92%</h4>
-                  <p className="text-blue-100">Success Rate</p>
-                </div>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link href="/download" className="px-6 py-3 bg-white text-center font-medium rounded-lg transition-colors" style={{ color: '#0674B4' }}>
-                  Download Now
-                </Link>
-                <Link href="/contact" className="px-6 py-3 border border-white text-white text-center font-medium rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">
-                  Schedule a Demo
-                </Link>
-              </div>
+        <p className="text-blue-50 text-lg max-w-lg">
+          Join thousands of entrepreneurs and investors already using our platform to connect, collaborate, and create successful ventures.
+        </p>
+
+        <div className="grid grid-cols-2 gap-4">
+          <div className="border border-blue-300 p-4 rounded-md backdrop-blur-sm bg-[#0674B4]">
+            <p className="font-semibold text-2xl">5,000+</p>
+            <p className="text-blue-100 text-sm">Active Entrepreneurs</p>
+          </div>
+          <div className="border border-blue-300 p-4 rounded-md backdrop-blur-sm bg-[#0674B4]">
+            <p className="font-semibold text-2xl">$100M+</p>
+            <p className="text-blue-100 text-sm">Investment Facilitated</p>
+          </div>
+          <div className="border border-blue-300 p-4 rounded-md backdrop-blur-sm bg-[#0674B4]">
+            <p className="font-semibold text-2xl">1,200+</p>
+            <p className="text-blue-100 text-sm">Investor Network</p>
+          </div>
+          <div className="border border-blue-300 p-4 rounded-md backdrop-blur-sm bg-[#0674B4]">
+            <p className="font-semibold text-2xl">92%</p>
+            <p className="text-blue-100 text-sm">Success Rate</p>
+          </div>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <a href="/download" className="px-6 py-3 bg-white text-[#0674B4] text-center font-medium rounded-md hover:bg-blue-50 transition-colors duration-300 shadow-sm">
+            Download Now
+          </a>
+          <a href="/contact" className="px-6 py-3 border border-white text-white text-center font-medium rounded-md hover:bg-white hover:bg-opacity-10 transition-colors duration-300">
+            Schedule a Demo
+          </a>
+        </div>
+      </div>
+
+      <div className="space-y-6 mt-8 md:mt-0">
+        <div className="backdrop-blur-sm bg-[#0674B4] border border-blue-300 p-6 rounded-md">
+          <div className="flex items-center mb-4">
+            <div className="flex">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <svg key={star} className="h-5 w-5 text-yellow-300 fill-current" viewBox="0 0 20 20">
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                </svg>
+              ))}
             </div>
-            
-            <div className="space-y-6">
-              <div className="bg-white bg-opacity-10 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3">What Our Users Say</h3>
-                <p className="italic text-blue-100 mb-4">
-                  "Flow has been instrumental in helping us secure our Series A funding. The platform made it easy to connect with the right investors who understood our vision."
-                </p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-blue-200 mr-3"></div>
-                  <div>
-                    <p className="font-medium">Sarah Johnson</p>
-                    <p className="text-blue-200 text-sm">CEO, TechNova</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white bg-opacity-10 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-3">Getting Started is Easy</h3>
-                <ol className="space-y-2 ml-6 list-decimal">
-                  <li className="text-blue-100">Download the Flow app</li>
-                  <li className="text-blue-100">Create your profile</li>
-                  <li className="text-blue-100">Connect with potential partners</li>
-                  <li className="text-blue-100">Start collaborating and growing</li>
-                </ol>
-              </div>
+          </div>
+          <p className="italic text-blue-50 mb-6">
+            "Flow has been instrumental in helping us secure our Series A funding. The platform made it easy to connect with the right investors who understood our vision."
+          </p>
+          <div className="flex items-center">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-300 to-blue-200 flex items-center justify-center text-[#0674B4] font-bold">SJ</div>
+            <div className="ml-3">
+              <p className="font-medium">Sarah Johnson</p>
+              <p className="text-blue-200 text-sm">CEO, TechNova</p>
             </div>
           </div>
         </div>
-      </section>
 
+        <div className="backdrop-blur-sm bg-[#0674B4] border border-blue-300 p-6 rounded-md">
+          <h3 className="text-xl font-semibold mb-4">Four Simple Steps</h3>
+          <div className="space-y-4">
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-300 text-[#0674B4] flex items-center justify-center font-semibold text-sm">1</div>
+              <p className="ml-3 text-blue-50">Download the Flow app</p>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-300 text-[#0674B4] flex items-center justify-center font-semibold text-sm">2</div>
+              <p className="ml-3 text-blue-50">Create your profile</p>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-300 text-[#0674B4] flex items-center justify-center font-semibold text-sm">3</div>
+              <p className="ml-3 text-blue-50">Connect with potential partners</p>
+            </div>
+            <div className="flex items-start">
+              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-300 text-[#0674B4] flex items-center justify-center font-semibold text-sm">4</div>
+              <p className="ml-3 text-blue-50">Start collaborating and growing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="container mx-auto px-6">
