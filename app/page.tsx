@@ -193,138 +193,195 @@ export default function Home() {
           </div>
 
           {/* Additional feature content */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">Empowering Connections</h3>
-              <p className="text-gray-600 mb-6">
-                Flow provides a structured environment where entrepreneurs can present their ideas clearly and investors can efficiently evaluate opportunities.
-              </p>
-              <ul className="space-y-3">
-                {[
-                  "Secure messaging and file sharing",
-                  "Integrated video meetings and presentations",
-                  "Document collaboration and version control",
-                  "Milestone tracking and progress updates",
-                  "Resource library and expert guidance"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start">
-                    <svg className="w-5 h-5 mt-0.5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{ color: '#0674B4' }}>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                "Startup Funding",
-                "Angel Investment",
-                "Venture Capital",
-                "Seed Funding",
-                "Series A Rounds",
-                "Strategic Partnerships",
-                "Business Growth",
-                "Innovation Hub"
-              ].map((item, i) => (
-                <div key={i} className="bg-gray-50 p-4 rounded-lg flex items-center justify-center">
-                  <span className="font-medium" style={{ color: '#0674B4' }}>{item}</span>
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Left Column - Features with Icons */}
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="bg-blue-50 p-3 rounded-lg mr-4">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#0674B4">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                  </svg>
                 </div>
-              ))}
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Streamlined Connections</h3>
+                  <p className="text-gray-600">Efficient platform for idea presentation and evaluation</p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  {
+                    icon: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z",
+                    title: "Secure Comms",
+                    desc: "Encrypted messaging"
+                  },
+                  {
+                    icon: "M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z",
+                    title: "Video Meetings",
+                    desc: "Integrated directly"
+                  },
+                  {
+                    icon: "M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+                    title: "Documents",
+                    desc: "Version control"
+                  },
+                  {
+                    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2",
+                    title: "Milestones",
+                    desc: "Progress tracking"
+                  }
+                ].map((feature, i) => (
+                  <div key={i} className="bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-blue-50 w-10 h-10 rounded-lg flex items-center justify-center mb-3">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#0674B4">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.icon} />
+                      </svg>
+                    </div>
+                    <h4 className="font-semibold text-gray-800">{feature.title}</h4>
+                    <p className="text-sm text-gray-500 mt-1">{feature.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Column - Investment Types with Visual Indicators */}
+            <div className="space-y-6">
+              <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-6 rounded-xl">
+                <h4 className="font-semibold text-gray-800 mb-3">Investment Focus Areas</h4>
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { name: "Seed Fundings", value: 35, color: "bg-blue-200" },
+                    { name: "Series A", value: 25, color: "bg-blue-300" },
+                    { name: "Venture Capital", value: 20, color: "bg-blue-400" },
+                    { name: "Angel Network", value: 20, color: "bg-blue-500" }
+                  ].map((item, i) => (
+                    <div key={i} className="bg-white p-3 rounded-lg shadow-xs">
+                      <div className="flex justify-between items-center mb-1">
+                        <span className="text-xs font-medium text-gray-600">{item.name}</span>
+                        <span className="text-xs font-bold" style={{ color: '#0674B4' }}>{item.value}%</span>
+                      </div>
+                      <div className="w-full bg-gray-100 rounded-full h-1.5">
+                        <div
+                          className={`h-1.5 rounded-full ${item.color}`}
+                          style={{ width: `${item.value}%` }}
+                        ></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: "M13 7h8m0 0v8m0-8l-8 8-4-4-6 6", title: "Growth" },
+                  { icon: "M9 3v2h6V3m0 18v-2H9v2m6-16h2a2 2 0 012 2v12a2 2 0 01-2 2h-2m-6 0H7a2 2 0 01-2-2V7a2 2 0 012-2h2", title: "Scale" },
+                  { icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z", title: "Funding" },
+                  { icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10", title: "Partners" }
+                ].map((item, i) => (
+                  <div key={i} className="bg-white p-4 rounded-xl border border-gray-100 hover:border-blue-200 transition-colors">
+                    <div className="w-8 h-8 rounded-md bg-blue-50 flex items-center justify-center mb-2">
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#0674B4">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={item.icon} />
+                      </svg>
+                    </div>
+                    <h5 className="font-medium text-gray-700">{item.title}</h5>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section className="py-16 md:py-24 w-full text-white bg-gradient-to-br from-[#0674B4] to-blue-900">
-  <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-    <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
-      <div className="space-y-8">
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Ready to transform your ideas into reality?</h2>
-          <div className="h-1 w-16 bg-blue-300 mt-4"></div>
-        </div>
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Ready to transform your ideas into reality?</h2>
+                <div className="h-1 w-16 bg-blue-300 mt-4"></div>
+              </div>
 
-        <p className="text-blue-50 text-lg max-w-lg">
-          Join thousands of entrepreneurs and investors already using our platform to connect, collaborate, and create successful ventures.
-        </p>
+              <p className="text-blue-50 text-lg max-w-lg">
+                Join thousands of entrepreneurs and investors already using our platform to connect, collaborate, and create successful ventures.
+              </p>
 
-        <div className="grid grid-cols-2 gap-4">
-          <div className="border border-blue-300 p-4 rounded-md backdrop-blur-sm bg-[#0674B4]">
-            <p className="font-semibold text-2xl">5,000+</p>
-            <p className="text-blue-100 text-sm">Active Entrepreneurs</p>
-          </div>
-          <div className="border border-blue-300 p-4 rounded-md backdrop-blur-sm bg-[#0674B4]">
-            <p className="font-semibold text-2xl">$100M+</p>
-            <p className="text-blue-100 text-sm">Investment Facilitated</p>
-          </div>
-          <div className="border border-blue-300 p-4 rounded-md backdrop-blur-sm bg-[#0674B4]">
-            <p className="font-semibold text-2xl">1,200+</p>
-            <p className="text-blue-100 text-sm">Investor Network</p>
-          </div>
-          <div className="border border-blue-300 p-4 rounded-md backdrop-blur-sm bg-[#0674B4]">
-            <p className="font-semibold text-2xl">92%</p>
-            <p className="text-blue-100 text-sm">Success Rate</p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="border border-blue-300 p-4 rounded-md backdrop-blur-sm bg-[#0674B4]">
+                  <p className="font-semibold text-2xl">5,000+</p>
+                  <p className="text-blue-100 text-sm">Active Entrepreneurs</p>
+                </div>
+                <div className="border border-blue-300 p-4 rounded-md backdrop-blur-sm bg-[#0674B4]">
+                  <p className="font-semibold text-2xl">$100M+</p>
+                  <p className="text-blue-100 text-sm">Investment Facilitated</p>
+                </div>
+                <div className="border border-blue-300 p-4 rounded-md backdrop-blur-sm bg-[#0674B4]">
+                  <p className="font-semibold text-2xl">1,200+</p>
+                  <p className="text-blue-100 text-sm">Investor Network</p>
+                </div>
+                <div className="border border-blue-300 p-4 rounded-md backdrop-blur-sm bg-[#0674B4]">
+                  <p className="font-semibold text-2xl">92%</p>
+                  <p className="text-blue-100 text-sm">Success Rate</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="/download" className="px-6 py-3 bg-white text-[#0674B4] text-center font-medium rounded-md hover:bg-blue-50 transition-colors duration-300 shadow-sm">
+                  Download Now
+                </a>
+                <a href="/contact" className="px-6 py-3 border border-white text-white text-center font-medium rounded-md hover:bg-white hover:bg-opacity-10 transition-colors duration-300">
+                  Schedule a Demo
+                </a>
+              </div>
+            </div>
+
+            <div className="space-y-6 mt-8 md:mt-0">
+              <div className="backdrop-blur-sm bg-[#0674B4] border border-blue-300 p-6 rounded-md">
+                <div className="flex items-center mb-4">
+                  <div className="flex">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg key={star} className="h-5 w-5 text-yellow-300 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+                <p className="italic text-blue-50 mb-6">
+                  "Flow has been instrumental in helping us secure our Series A funding. The platform made it easy to connect with the right investors who understood our vision."
+                </p>
+                <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-300 to-blue-200 flex items-center justify-center text-[#0674B4] font-bold">SJ</div>
+                  <div className="ml-3">
+                    <p className="font-medium">Sarah Johnson</p>
+                    <p className="text-blue-200 text-sm">CEO, TechNova</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="backdrop-blur-sm bg-[#0674B4] border border-blue-300 p-6 rounded-md">
+                <h3 className="text-xl font-semibold mb-4">Four Simple Steps</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-300 text-[#0674B4] flex items-center justify-center font-semibold text-sm">1</div>
+                    <p className="ml-3 text-blue-50">Download the Flow app</p>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-300 text-[#0674B4] flex items-center justify-center font-semibold text-sm">2</div>
+                    <p className="ml-3 text-blue-50">Create your profile</p>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-300 text-[#0674B4] flex items-center justify-center font-semibold text-sm">3</div>
+                    <p className="ml-3 text-blue-50">Connect with potential partners</p>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-300 text-[#0674B4] flex items-center justify-center font-semibold text-sm">4</div>
+                    <p className="ml-3 text-blue-50">Start collaborating and growing</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div className="flex flex-col sm:flex-row gap-4">
-          <a href="/download" className="px-6 py-3 bg-white text-[#0674B4] text-center font-medium rounded-md hover:bg-blue-50 transition-colors duration-300 shadow-sm">
-            Download Now
-          </a>
-          <a href="/contact" className="px-6 py-3 border border-white text-white text-center font-medium rounded-md hover:bg-white hover:bg-opacity-10 transition-colors duration-300">
-            Schedule a Demo
-          </a>
-        </div>
-      </div>
-
-      <div className="space-y-6 mt-8 md:mt-0">
-        <div className="backdrop-blur-sm bg-[#0674B4] border border-blue-300 p-6 rounded-md">
-          <div className="flex items-center mb-4">
-            <div className="flex">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <svg key={star} className="h-5 w-5 text-yellow-300 fill-current" viewBox="0 0 20 20">
-                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                </svg>
-              ))}
-            </div>
-          </div>
-          <p className="italic text-blue-50 mb-6">
-            "Flow has been instrumental in helping us secure our Series A funding. The platform made it easy to connect with the right investors who understood our vision."
-          </p>
-          <div className="flex items-center">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-300 to-blue-200 flex items-center justify-center text-[#0674B4] font-bold">SJ</div>
-            <div className="ml-3">
-              <p className="font-medium">Sarah Johnson</p>
-              <p className="text-blue-200 text-sm">CEO, TechNova</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="backdrop-blur-sm bg-[#0674B4] border border-blue-300 p-6 rounded-md">
-          <h3 className="text-xl font-semibold mb-4">Four Simple Steps</h3>
-          <div className="space-y-4">
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-300 text-[#0674B4] flex items-center justify-center font-semibold text-sm">1</div>
-              <p className="ml-3 text-blue-50">Download the Flow app</p>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-300 text-[#0674B4] flex items-center justify-center font-semibold text-sm">2</div>
-              <p className="ml-3 text-blue-50">Create your profile</p>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-300 text-[#0674B4] flex items-center justify-center font-semibold text-sm">3</div>
-              <p className="ml-3 text-blue-50">Connect with potential partners</p>
-            </div>
-            <div className="flex items-start">
-              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-blue-300 text-[#0674B4] flex items-center justify-center font-semibold text-sm">4</div>
-              <p className="ml-3 text-blue-50">Start collaborating and growing</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="container mx-auto px-6">
