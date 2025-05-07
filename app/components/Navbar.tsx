@@ -1,11 +1,12 @@
-// components/Navbar.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     const handleResize = () => {
@@ -18,10 +19,19 @@ const Navbar = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, [isMenuOpen]);
 
+  const handleNavLinkClick = (path: string) => {
+    router.push(path);
+    setIsMenuOpen(false); // Close menu after navigating
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
+        {/* Logo and Brand */}
+        <div
+          onClick={() => handleNavLinkClick('/')}
+          className="flex items-center space-x-2 cursor-pointer"
+        >
           <div className="h-8 w-8 rounded-full" style={{ backgroundColor: '#0674B4' }}></div>
           <span className="font-bold text-2xl" style={{ color: '#0674B4' }}>Flow</span>
         </div>
@@ -63,18 +73,30 @@ const Navbar = () => {
       {isMenuOpen && (
         <nav className="md:hidden bg-white border-t border-gray-200 p-4">
           <div className="flex flex-col space-y-4">
-            <Link href="/entrepreneurs" className="text-gray-700 hover:text-blue-600 transition-colors py-2">
+            <button
+              onClick={() => handleNavLinkClick('/entrepreneurs')}
+              className="text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
+            >
               For Entrepreneurs
-            </Link>
-            <Link href="/investors" className="text-gray-700 hover:text-blue-600 transition-colors py-2">
+            </button>
+            <button
+              onClick={() => handleNavLinkClick('/investors')}
+              className="text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
+            >
               For Investors
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors py-2">
+            </button>
+            <button
+              onClick={() => handleNavLinkClick('/about')}
+              className="text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
+            >
               About
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors py-2">
+            </button>
+            <button
+              onClick={() => handleNavLinkClick('/contact')}
+              className="text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
+            >
               Contact
-            </Link>
+            </button>
           </div>
         </nav>
       )}
