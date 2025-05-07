@@ -3,7 +3,11 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
-import '../app/globals.css'; // Import global styles
+// Make sure this path is correct relative to this file
+// If using src directory, it might be ../styles/globals.css or similar
+// If in app directory, ensure globals.css is properly imported in layout.tsx or relevant file
+import '../app/globals.css'; // Consider if this is the right place based on your project structure
+
 import {
   FaRocket,
   FaBullseye,
@@ -11,18 +15,11 @@ import {
   FaUserPlus,
   FaHandshake,
   FaChartLine,
-  FaBalanceScale,
-  FaUsers,
-  FaCogs,
   FaStar,
   FaTwitter,
   FaLinkedin,
-  FaInstagram,
   FaGithub,
   FaMedium,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaBars
 } from 'react-icons/fa';
 
 // Types
@@ -111,42 +108,6 @@ const AboutPage: React.FC = () => {
         <meta name="description" content="Learn about Flow's mission to connect visionary entrepreneurs with strategic investors." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      {/* Navigation */}
-      <nav className="py-4 px-6 md:px-16 shadow-sm bg-white sticky top-0 z-50">
-        <div className="container mx-auto flex justify-between items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-md bg-[#0674B4]"></div>
-            <span className="text-2xl font-bold text-[#0674B4]">Flow</span>
-          </Link>
-          <div className="hidden md:flex space-x-8">
-            <Link href="/" className="font-medium text-gray-600 hover:text-gray-900">
-              Home
-            </Link>
-            <Link href="/about" className="font-medium text-[#0674B4]">
-              About
-            </Link>
-            <Link href="/solutions" className="font-medium text-gray-600 hover:text-gray-900">
-              Solutions
-            </Link>
-            <Link href="/investors" className="font-medium text-gray-600 hover:text-gray-900">
-              Investors
-            </Link>
-            <Link href="/startups" className="font-medium text-gray-600 hover:text-gray-900">
-              Startups
-            </Link>
-          </div>
-          <div className="hidden md:block">
-            <Link href="/contact" className="px-5 py-2 rounded-lg text-white bg-[#0674B4] hover:bg-opacity-90 transition-colors">
-              Contact Us
-            </Link>
-          </div>
-          <button className="md:hidden text-[#0674B4]">
-            <FaBars className="text-xl" />
-          </button>
-        </div>
-      </nav>
-
       <main>
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-[#f0f7fc]">
@@ -161,6 +122,7 @@ const AboutPage: React.FC = () => {
                 </p>
               </div>
               <div className="md:w-1/2 flex justify-center mt-8 md:mt-0 animate-slide-up">
+                {/* ADDED w-full here */}
                 <div className="relative w-full max-w-md">
                   <div className="absolute -z-10 -top-4 -left-4 w-48 h-48 rounded-full opacity-20 bg-[#0674B4]"></div>
                   <div className="absolute -z-10 bottom-4 right-4 w-32 h-32 rounded-full opacity-20 bg-[#0674B4]"></div>
@@ -184,7 +146,8 @@ const AboutPage: React.FC = () => {
           <div className="container mx-auto px-6 md:px-16">
             <div className="flex flex-col md:flex-row items-center">
               <div className="md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-12">
-                <div className="relative">
+                {/* ADDED w-full here */}
+                <div className="relative w-full">
                   <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-lg opacity-20 bg-[#0674B4]"></div>
                   <div className="w-full h-64 bg-gray-300 rounded-lg shadow-md relative z-10">
                     <Image
@@ -293,7 +256,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-16 md:py-24 bg-[#b9d9ec]">
+        <section className="py-16 md:py-24 bg-[#f0f7fc]">
           <div className="container mx-auto px-6 md:px-16">
             <div className="text-center mb-16">
               <span className="text-sm font-semibold uppercase tracking-wider text-[#0674B4]">Our People</span>
@@ -305,28 +268,32 @@ const AboutPage: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {teamMembers.map((member, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm text-center">
-                  <div className="w-24 h-24 rounded-full bg-gray-200 mx-auto mb-4"></div>
+                  {/* Placeholder for team member image */}
+                  <div className="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-4 overflow-hidden flex items-center justify-center text-gray-600">
+                    {/* Consider adding a placeholder icon or initials if no image */}
+                    <FaUserPlus size={40} /> {/* Using a generic icon as placeholder */}
+                  </div>
                   <h3 className="text-lg font-bold text-gray-900">{member.name}</h3>
                   <p className="text-sm text-gray-600 mb-3">{member.role}</p>
                   <p className="text-sm text-gray-700 mb-4">{member.bio}</p>
                   <div className="flex justify-center space-x-3">
                     {member.socialLinks.linkedin && (
-                      <a href={member.socialLinks.linkedin} className="text-gray-500 hover:text-gray-700">
+                      <a href={member.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
                         <FaLinkedin />
                       </a>
                     )}
                     {member.socialLinks.twitter && (
-                      <a href={member.socialLinks.twitter} className="text-gray-500 hover:text-gray-700">
+                      <a href={member.socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
                         <FaTwitter />
                       </a>
                     )}
                     {member.socialLinks.github && (
-                      <a href={member.socialLinks.github} className="text-gray-500 hover:text-gray-700">
+                      <a href={member.socialLinks.github} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
                         <FaGithub />
                       </a>
                     )}
                     {member.socialLinks.medium && (
-                      <a href={member.socialLinks.medium} className="text-gray-500 hover:text-gray-700">
+                      <a href={member.socialLinks.medium} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
                         <FaMedium />
                       </a>
                     )}
@@ -372,7 +339,11 @@ const AboutPage: React.FC = () => {
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-[#f0f7fc] p-8 rounded-lg shadow-sm border border-gray-100">
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 rounded-full bg-gray-200 mr-4"></div>
+                    {/* Placeholder for testimonial avatar */}
+                    <div className="w-12 h-12 rounded-full bg-gray-300 mr-4 flex items-center justify-center text-gray-600">
+                      {/* Consider adding a placeholder icon or initials if no image */}
+                      <FaUserPlus size={24} /> {/* Using a generic icon as placeholder */}
+                    </div>
                     <div>
                       <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
                       <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>
@@ -412,80 +383,8 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white pt-16 pb-8">
-        <div className="container mx-auto px-6 md:px-16">
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
-            <div>
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="h-8 w-8 rounded-md bg-white"></div>
-                <span className="text-2xl font-bold text-[#0674B4]">Flow</span>
-              </div>
-              <p className="text-gray-400 mb-6">
-                Connecting visionary entrepreneurs with strategic investors.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white">
-                  <FaTwitter />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  <FaLinkedin />
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white">
-                  <FaInstagram />
-                </a>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-6">Company</h4>
-              <ul className="space-y-3">
-                <li><Link href="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
-                <li><Link href="/careers" className="text-gray-400 hover:text-white">Careers</Link></li>
-                <li><Link href="/press" className="text-gray-400 hover:text-white">Press</Link></li>
-                <li><Link href="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-6">Resources</h4>
-              <ul className="space-y-3">
-                <li><Link href="/for-startups" className="text-gray-400 hover:text-white">For Startups</Link></li>
-                <li><Link href="/for-investors" className="text-gray-400 hover:text-white">For Investors</Link></li>
-                <li><Link href="/success-stories" className="text-gray-400 hover:text-white">Success Stories</Link></li>
-                <li><Link href="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-bold mb-6">Contact</h4>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <FaEnvelope className="mr-2 text-gray-400" />
-                  <a href="mailto:info@flowplatform.com" className="text-gray-400 hover:text-white">info@flowplatform.com</a>
-                </li>
-                <li className="flex items-center">
-                  <FaMapMarkerAlt className="mr-2 text-gray-400" />
-                  <span className="text-gray-400">San Francisco, CA</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-500 text-sm mb-4 md:mb-0">
-                © 2025 Flow Platform, Inc. All rights reserved.
-              </p>
-              <div className="flex space-x-6">
-                <Link href="/privacy" className="text-gray-500 text-sm hover:text-gray-400">Privacy Policy</Link>
-                <Link href="/terms" className="text-gray-500 text-sm hover:text-gray-400">Terms of Service</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </>
   );
 };
 
 export default AboutPage;
-
-// Required CSS for animations - create a globals.css file and include these
