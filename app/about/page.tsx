@@ -6,7 +6,7 @@ import Image from 'next/image';
 // Make sure this path is correct relative to this file
 // If using src directory, it might be ../styles/globals.css or similar
 // If in app directory, ensure globals.css is properly imported in layout.tsx or relevant file
-import '../app/globals.css'; // Consider if this is the right place based on your project structure
+import '../globals.css'; // Adjust the path as necessary
 
 import {
   FaRocket,
@@ -122,13 +122,12 @@ const AboutPage: React.FC = () => {
                 </p>
               </div>
               <div className="md:w-1/2 flex justify-center mt-8 md:mt-0 animate-slide-up">
-                {/* ADDED w-full here */}
                 <div className="relative w-full max-w-md">
-                  <div className="absolute -z-10 -top-4 -left-4 w-48 h-48 rounded-full opacity-20 bg-[#0674B4]"></div>
-                  <div className="absolute -z-10 bottom-4 right-4 w-32 h-32 rounded-full opacity-20 bg-[#0674B4]"></div>
-                  <div className="w-full h-64 bg-gray-300 rounded-lg shadow-lg relative z-10">
+                  <div className="absolute -z-10 -top-4 -left-4 w-48 h-48 rounded-full "></div>
+                  <div className="absolute -z-10 bottom-4 right-4 w-32 h-32 rounded-full "></div>
+                  <div className="w-full h-64  rounded-lg  relative z-10">
                     <Image
-                      src="https://images.unsplash.com/photo-1562577308-c8b2614b9b9a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fHRlYW18ZW58MHx8MHx8fDA%3D"
+                      src="https://png.pngtree.com/png-vector/20221019/ourmid/pngtree-team-leader-and-teamwork-concept-png-image_6327989.png"
                       alt="Team Collaboration"
                       layout="fill"
                       objectFit="cover"
@@ -148,13 +147,13 @@ const AboutPage: React.FC = () => {
               <div className="md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-12">
                 {/* ADDED w-full here */}
                 <div className="relative w-full">
-                  <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-lg opacity-20 bg-[#0674B4]"></div>
-                  <div className="w-full h-64 bg-gray-300 rounded-lg shadow-md relative z-10">
+                  <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-lg"></div>
+                  <div className="w-full h-64  relative z-10">
                     <Image
-                      src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fHRlYW18ZW58MHx8MHx8fDA%3D"
+                      src="https://png.pngtree.com/png-vector/20230428/ourmid/pngtree-innovation-line-icon-vector-png-image_6738260.png"
                       alt="Flow Founding Team"
                       layout="fill"
-                      objectFit="cover"
+                      objectFit="contain"
                       className="rounded-lg"
                     />
                   </div>

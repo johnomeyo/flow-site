@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import '../app/globals.css';
+import '../globals.css';
 import {
     MapPin,
     Phone,

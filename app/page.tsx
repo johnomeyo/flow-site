@@ -20,74 +20,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      {/* Navigation */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-full" style={{ backgroundColor: '#0674B4' }}></div>
-            <span className="font-bold text-2xl" style={{ color: '#0674B4' }}>Flow</span>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/entrepreneurs" className="text-gray-700 hover:text-blue-600 transition-colors">
-              For Entrepreneurs
-            </Link>
-            <Link href="/investors" className="text-gray-700 hover:text-blue-600 transition-colors">
-              For Investors
-            </Link>
-            <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
-              About Us
-            </Link>
-            <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
-              Contact Us
-            </Link>
-            <Link href="/download" className="px-4 py-2 text-white rounded-lg hover:bg-opacity-90 transition-colors" style={{ backgroundColor: '#0674B4' }}>
-              Download App
-            </Link>
-          </nav>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden text-gray-700 focus:outline-none"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden bg-white border-t border-gray-200 p-4">
-            <div className="flex flex-col space-y-4">
-              <Link href="/entrepreneurs" className="text-gray-700 hover:text-blue-600 transition-colors py-2">
-                For Entrepreneurs
-              </Link>
-              <Link href="/investors" className="text-gray-700 hover:text-blue-600 transition-colors py-2">
-                For Investors
-              </Link>
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors py-2">
-                About Us
-              </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors py-2">
-                Contact Us
-              </Link>
-              <Link href="/download" className="py-2 px-4 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center" style={{ backgroundColor: '#0674B4' }}>
-                Download App
-              </Link>
-            </div>
-          </nav>
-        )}
-      </header>
-
+      
       {/* Hero Section */}
       <section className="py-16 md:py-24 overflow-hidden" style={{ backgroundColor: '#f0f7fc' }}>
         <div className="container mx-auto px-6">
@@ -148,7 +81,7 @@ export default function Home() {
         </div>
       </section>
       {/* How It Works Section */}
-      <section className="py-16 md:py-24 " style={{ backgroundColor: '#D7E6EA' }}>
+      <section className="py-16 md:py-24 " style={{ backgroundColor: '##C0DCED' }}>
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">How <span style={{ color: '#0674B4' }}>Flow</span> Works</h2>

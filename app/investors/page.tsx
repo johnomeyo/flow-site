@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import '../app/globals.css';
+import '../globals.css';
 import { 
   ChartBar, 
   LineChart, 
