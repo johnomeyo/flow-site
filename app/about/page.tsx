@@ -255,54 +255,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-16 md:py-24 bg-[#f0f7fc]">
-          <div className="container mx-auto px-6 md:px-16">
-            <div className="text-center mb-16">
-              <span className="text-sm font-semibold uppercase tracking-wider text-[#0674B4]">Our People</span>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2">Meet the Team</h2>
-              <p className="text-gray-700 mt-4 max-w-2xl mx-auto">
-                A diverse group of entrepreneurs, investors, and technologists united by a passion for innovation.
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamMembers.map((member, index) => (
-                <div key={index} className="bg-white p-6 rounded-lg shadow-sm text-center">
-                  {/* Placeholder for team member image */}
-                  <div className="w-24 h-24 rounded-full bg-gray-300 mx-auto mb-4 overflow-hidden flex items-center justify-center text-gray-600">
-                    {/* Consider adding a placeholder icon or initials if no image */}
-                    <FaUserPlus size={40} /> {/* Using a generic icon as placeholder */}
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900">{member.name}</h3>
-                  <p className="text-sm text-gray-600 mb-3">{member.role}</p>
-                  <p className="text-sm text-gray-700 mb-4">{member.bio}</p>
-                  <div className="flex justify-center space-x-3">
-                    {member.socialLinks.linkedin && (
-                      <a href={member.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
-                        <FaLinkedin />
-                      </a>
-                    )}
-                    {member.socialLinks.twitter && (
-                      <a href={member.socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
-                        <FaTwitter />
-                      </a>
-                    )}
-                    {member.socialLinks.github && (
-                      <a href={member.socialLinks.github} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
-                        <FaGithub />
-                      </a>
-                    )}
-                    {member.socialLinks.medium && (
-                      <a href={member.socialLinks.medium} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-700">
-                        <FaMedium />
-                      </a>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
+        
         {/* Stats */}
         <section className="py-16 md:py-24 bg-[#b9d9ec]">
           <div className="container mx-auto px-6 md:px-16">
