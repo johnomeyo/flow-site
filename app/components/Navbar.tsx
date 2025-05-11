@@ -1,12 +1,12 @@
 'use client';
-
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
+  const currentPath = usePathname();
 
   useEffect(() => {
     const handleResize = () => {
@@ -14,7 +14,6 @@ const Navbar = () => {
         setIsMenuOpen(false);
       }
     };
-
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [isMenuOpen]);
@@ -22,6 +21,14 @@ const Navbar = () => {
   const handleNavLinkClick = (path: string) => {
     router.push(path);
     setIsMenuOpen(false); // Close menu after navigating
+  };
+
+  const getLinkClasses = (path: string) => {
+    const baseClasses = "transition-colors";
+    const activeClasses = "text-blue-600 font-semibold";
+    const inactiveClasses = "text-gray-700 hover:text-blue-600";
+    
+    return `${baseClasses} ${currentPath === path ? activeClasses : inactiveClasses}`;
   };
 
   return (
@@ -38,16 +45,16 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="/entrepreneurs" className="text-gray-700 hover:text-blue-600 transition-colors">
+          <Link href="/entrepreneurs" className={getLinkClasses('/entrepreneurs')}>
             For Entrepreneurs
           </Link>
-          <Link href="/investors" className="text-gray-700 hover:text-blue-600 transition-colors">
+          <Link href="/investors" className={getLinkClasses('/investors')}>
             For Investors
           </Link>
-          <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+          <Link href="/about" className={getLinkClasses('/about')}>
             About
           </Link>
-          <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+          <Link href="/contact" className={getLinkClasses('/contact')}>
             Contact
           </Link>
         </nav>
@@ -75,25 +82,25 @@ const Navbar = () => {
           <div className="flex flex-col space-y-4">
             <button
               onClick={() => handleNavLinkClick('/entrepreneurs')}
-              className="text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
+              className={`text-left py-2 ${getLinkClasses('/entrepreneurs')}`}
             >
               For Entrepreneurs
             </button>
             <button
               onClick={() => handleNavLinkClick('/investors')}
-              className="text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
+              className={`text-left py-2 ${getLinkClasses('/investors')}`}
             >
               For Investors
             </button>
             <button
               onClick={() => handleNavLinkClick('/about')}
-              className="text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
+              className={`text-left py-2 ${getLinkClasses('/about')}`}
             >
               About
             </button>
             <button
               onClick={() => handleNavLinkClick('/contact')}
-              className="text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
+              className={`text-left py-2 ${getLinkClasses('/contact')}`}
             >
               Contact
             </button>
