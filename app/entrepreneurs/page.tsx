@@ -380,8 +380,8 @@ const EntrepreneursPage: NextPage = () => {
           </div>
           
           <div className="mt-10 text-center">
-            <Link href="/funding-criteria" className="inline-flex items-center px-6 py-3 rounded-lg transition-colors text-center font-medium" style={{ color: '#0674B4' }}>
-              View Funding Criteria
+            <Link href="/premium" className="inline-flex items-center px-6 py-3 rounded-lg transition-colors text-center font-medium" style={{ color: '#0674B4' }}>
+              Go Premium
               <ChevronRight size={16} className="ml-1" />
             </Link>
           </div>
