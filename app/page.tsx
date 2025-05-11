@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import ScreenshotShowcase from './components/ScreenshotShowcase';
 
 export default function Home() {
 
@@ -231,7 +232,7 @@ export default function Home() {
         </div>
       </section>
 
-
+      {/* <ScreenshotShowcase /> */}
       {/* Footer */}
 
     </div>
