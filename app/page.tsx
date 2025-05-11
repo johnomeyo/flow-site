@@ -6,7 +6,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      
+
       {/* Hero Section */}
       <section className="py-16 md:py-24 overflow-hidden" style={{ backgroundColor: '#f0f7fc' }}>
         <div className="container mx-auto px-6">
@@ -103,14 +103,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-16 text-center">
-            <button
-              className="px-8 py-4 rounded-lg text-white font-medium transition-all duration-300 transform hover:scale-105"
-              style={{ backgroundColor: '#0674B4' }}
-            >
-              Start Your Journey
-            </button>
-          </div>
+
         </div>
       </section>
 
@@ -152,13 +145,22 @@ export default function Home() {
               </div>
 
               {/* CTA */}
+
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors font-medium" style={{ backgroundColor: '#0674B4' }}>
+                <Link
+                  href="/entrepreneurs"
+                  className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors font-medium"
+                  style={{ backgroundColor: '#0674B4' }}
+                >
                   For Entrepreneurs
-                </button>
-                <button className="px-6 py-3 border rounded-lg hover:bg-white transition-colors font-medium" style={{ borderColor: '#0674B4', color: '#0674B4' }}>
+                </Link>
+                <Link
+                  href="/investors"
+                  className="px-6 py-3 border rounded-lg hover:bg-white transition-colors font-medium"
+                  style={{ borderColor: '#0674B4', color: '#0674B4' }}
+                >
                   For Investors
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -228,10 +230,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
 
       {/* Footer */}
-     
+
     </div>
   );
 }

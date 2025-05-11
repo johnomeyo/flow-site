@@ -72,6 +72,7 @@ export default function PremiumPage() {
             <button
               type="submit"
               className="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+              style={{ backgroundColor: '#0674B4' }}
             >
               Submit for Verification
             </button>

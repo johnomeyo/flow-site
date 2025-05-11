@@ -388,29 +388,7 @@ const EntrepreneursPage: NextPage = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl overflow-hidden shadow-lg">
-            <div className="p-8 md:p-12">
-              <div className="max-w-lg">
-                <h2 className="text-3xl font-bold text-white mb-4">Ready to Fund Your Vision?</h2>
-                <p className="text-blue-50 mb-6">
-                  Apply now to connect with investors aligned with your industry, stage, and growth trajectory.
-                </p>
-                <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                  <Link href="/apply" className="px-6 py-3 bg-white text-blue-600 rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium">
-                    Apply Now
-                  </Link>
-                  <Link href="/book-advisor" className="px-6 py-3 border border-white text-white rounded-lg hover:bg-blue-600 transition-colors text-center font-medium">
-                    Speak to an Advisor
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
     </>
   );
 };
