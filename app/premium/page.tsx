@@ -2,7 +2,7 @@ import React from "react";
 
 export default function PremiumPage() {
   return (
-    <div className="min-h-screen bg-white text-gray-800 px-6 py-12">
+    <div className="min-h-screen bg-[#f0f7fc] text-gray-800 px-6 py-12">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl font-bold mb-4 text-blue-700">🚀 Go Premium — Invest in Your Success</h1>
         <p className="text-lg mb-6 text-gray-700">
@@ -83,7 +83,7 @@ export default function PremiumPage() {
         </div>
 
         <p className="text-sm text-gray-600 mt-8">
-          💬 Have questions? Contact us on WhatsApp: <a href="tel:+254790123456" className="text-blue-600 underline">0790 123 456</a> or email <a href="mailto:support@flowapp.co.ke" className="text-blue-600 underline">support@flowapp.co.ke</a>
+          💬 Have questions? Contact us on WhatsApp: <a href="tel:+254729822061" className="text-blue-600 underline">0729 822 061</a> or email <a href="mailto:teamflowfunding@gmail.com" className="text-blue-600 underline">teamflowfunding@gmail.com</a>
         </p>
       </div>
     </div>
