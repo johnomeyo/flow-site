@@ -141,7 +141,7 @@ const ContactPage: React.FC = () => {
                             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2>
 
                             <div className="space-y-6">
-                                <div className="flex items-start">
+                                {/* <div className="flex items-start">
                                     <div className="flex-shrink-0 rounded-full p-2 mr-4" style={{ backgroundColor: 'rgba(6, 116, 180, 0.1)' }}>
                                         <MapPin className="h-6 w-6" style={{ color: '#0674B4' }} />
                                     </div>
@@ -149,7 +149,7 @@ const ContactPage: React.FC = () => {
                                         <h3 className="font-medium text-gray-900">Our Office</h3>
                                         <p className="text-gray-600 mt-1">123 Innovation Way, San Francisco, CA 94107</p>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0 rounded-full p-2 mr-4" style={{ backgroundColor: 'rgba(6, 116, 180, 0.1)' }}>
@@ -157,7 +157,7 @@ const ContactPage: React.FC = () => {
                                     </div>
                                     <div>
                                         <h3 className="font-medium text-gray-900">Phone</h3>
-                                        <p className="text-gray-600 mt-1">+1 (555) 123-4567</p>
+                                        <p className="text-gray-600 mt-1">+254-729-822-061</p>
                                     </div>
                                 </div>
 
@@ -167,7 +167,7 @@ const ContactPage: React.FC = () => {
                                     </div>
                                     <div>
                                         <h3 className="font-medium text-gray-900">Email</h3>
-                                        <p className="text-gray-600 mt-1">contact@flowventures.com</p>
+                                        <p className="text-gray-600 mt-1">teamflowfunding@gmail.com</p>
                                     </div>
                                 </div>
 
