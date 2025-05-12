@@ -232,7 +232,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <ScreenshotShowcase /> */}
       {/* Footer */}
 
     </div>
