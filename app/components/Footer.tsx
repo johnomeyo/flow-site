@@ -21,7 +21,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link href="/entrepreneurs" className="hover:text-blue-400 transition-colors">For Entrepreneurs</Link></li>
               <li><Link href="/investors" className="hover:text-blue-400 transition-colors">For Investors</Link></li>
-              <li><Link href="/success-stories" className="hover:text-blue-400 transition-colors">Success Stories</Link></li>
+              {/* <li><Link href="/success-stories" className="hover:text-blue-400 transition-colors">Success Stories</Link></li> */}
             </ul>
           </div>
           <div>
@@ -35,8 +35,8 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><Link href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</Link></li>
-              <li><Link href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/legal" className="hover:text-blue-400 transition-colors">Terms of Service</Link></li>
+              <li><Link href="/legal" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
               <li><Link href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</Link></li>
             </ul>
           </div>
