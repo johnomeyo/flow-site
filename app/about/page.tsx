@@ -134,7 +134,7 @@ const AboutPage: React.FC = () => {
                   {/* Image Container - THIS IS THE CRITICAL PART FOR DIMENSIONS */}
                   <div className="w-full h-64 rounded-lg relative z-10 overflow-hidden"> {/* Added overflow-hidden as good practice with layout fill & rounded corners */}
                     <Image
-                      src="https://png.pngtree.com/png-vector/20221019/ourmid/pngtree-team-leader-and-teamwork-concept-png-image_6327989.png"
+                      src="https://blogimage.vantagecircle.com/content/images/2023/01/10-Smart-Ways-to-Better-Team-Collaboration-1.png"
                       alt="Team Collaboration"
                       layout="fill"
                       objectFit="cover" 
@@ -161,7 +161,7 @@ const AboutPage: React.FC = () => {
                   {/* Image's Direct Parent: CRITICAL for dimensions */}
                   <div className="w-full h-64 relative z-10 rounded-lg overflow-hidden"> {/* Explicit height, relative for Image, overflow for rounded corners */}
                     <Image
-                      src="https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-story-book-vector-png-image_6979857.png"
+                      src="https://cdn.prod.website-files.com/657ab76a5c0bbca529ce9a1e/6644ff2e0c176497b76f4077_Cross-Team-Collaboration.png"
                       alt="Flow Founding Team"
                       layout="fill"
                       objectFit="contain" 
