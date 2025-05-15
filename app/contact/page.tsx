@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState } from 'react';
@@ -13,7 +14,8 @@ import {
     Linkedin,
     Twitter,
     Instagram,
-    Facebook
+    Facebook,
+    CheckCircle
 } from 'lucide-react';
 
 interface FormState {
@@ -40,6 +42,7 @@ const ContactPage: React.FC = () => {
     const [errors, setErrors] = useState<FormErrors>({});
     const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
     const [submitSuccess, setSubmitSuccess] = useState<boolean | null>(null);
+    const [submitError, setSubmitError] = useState<string | null>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -84,20 +87,37 @@ const ContactPage: React.FC = () => {
         if (!validateForm()) return;
 
         setIsSubmitting(true);
+        setSubmitSuccess(null);
+        setSubmitError(null);
 
         try {
-            // Simulate API call
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            setSubmitSuccess(true);
-            // Reset form after successful submission
-            setFormData({
-                name: '',
-                email: '',
-                company: '',
-                message: ''
+            const response = await fetch('https://formspree.io/f/xjkwjnvk', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
             });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setSubmitSuccess(true);
+                // Reset form after successful submission
+                setFormData({
+                    name: '',
+                    email: '',
+                    company: '',
+                    message: ''
+                });
+            } else {
+                setSubmitSuccess(false);
+                setSubmitError(data.error || 'Something went wrong. Please try again.');
+            }
         } catch (error) {
             setSubmitSuccess(false);
+            setSubmitError('Network error. Please check your connection and try again.');
         } finally {
             setIsSubmitting(false);
         }
@@ -115,8 +135,6 @@ const ContactPage: React.FC = () => {
                 <meta property="og:url" content="https://flowventures.com/contact" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-
-
 
             {/* Page Title */}
             <section className="py-12" style={{ backgroundColor: '#f0f7fc' }}>
@@ -141,16 +159,6 @@ const ContactPage: React.FC = () => {
                             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2>
 
                             <div className="space-y-6">
-                                {/* <div className="flex items-start">
-                                    <div className="flex-shrink-0 rounded-full p-2 mr-4" style={{ backgroundColor: 'rgba(6, 116, 180, 0.1)' }}>
-                                        <MapPin className="h-6 w-6" style={{ color: '#0674B4' }} />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-medium text-gray-900">Our Office</h3>
-                                        <p className="text-gray-600 mt-1">123 Innovation Way, San Francisco, CA 94107</p>
-                                    </div>
-                                </div> */}
-
                                 <div className="flex items-start">
                                     <div className="flex-shrink-0 rounded-full p-2 mr-4" style={{ backgroundColor: 'rgba(6, 116, 180, 0.1)' }}>
                                         <Phone className="h-6 w-6" style={{ color: '#0674B4' }} />
@@ -206,15 +214,22 @@ const ContactPage: React.FC = () => {
                         <div className="bg-white rounded-xl shadow-md p-8">
                             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send Us a Message</h2>
 
-                            {submitSuccess === true ? (
-                                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
-                                    <p className="text-green-700">Thank you for your message! We'll get back to you soon.</p>
+                            {submitSuccess === true && (
+                                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6 flex items-start">
+                                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 mt-0.5" />
+                                    <div>
+                                        <p className="text-green-700 font-medium">Message sent successfully!</p>
+                                        <p className="text-green-600 text-sm mt-1">Thank you for reaching out. We'll get back to you as soon as possible.</p>
+                                    </div>
                                 </div>
-                            ) : submitSuccess === false ? (
+                            )}
+
+                            {submitSuccess === false && (
                                 <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
-                                    <p className="text-red-700">Something went wrong. Please try again later.</p>
+                                    <p className="text-red-700 font-medium">Unable to send message</p>
+                                    <p className="text-red-600 text-sm mt-1">{submitError || "Please try again later."}</p>
                                 </div>
-                            ) : null}
+                            )}
 
                             <form onSubmit={handleSubmit}>
                                 <div className="mb-4">
@@ -227,8 +242,7 @@ const ContactPage: React.FC = () => {
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className={`w-full px-4 py-2 rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-opacity-50`}
-                                        // style={{ focusRing: 'rgba(6, 116, 180, 0.5)' }}
+                                        className={`w-full px-4 py-2 rounded-lg border ${errors.name ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-opacity-50 focus:ring-blue-500`}
                                         placeholder="John Doe"
                                     />
                                     {errors.name && <p className="mt-1 text-sm text-red-500">{errors.name}</p>}
@@ -244,8 +258,7 @@ const ContactPage: React.FC = () => {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className={`w-full px-4 py-2 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-opacity-50`}
-                                        // style={{ focusRing: 'rgba(6, 116, 180, 0.5)' }}
+                                        className={`w-full px-4 py-2 rounded-lg border ${errors.email ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-opacity-50 focus:ring-blue-500`}
                                         placeholder="john@example.com"
                                     />
                                     {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
@@ -261,8 +274,7 @@ const ContactPage: React.FC = () => {
                                         name="company"
                                         value={formData.company}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-opacity-50"
-                                        // style={{ focusRing: 'rgba(6, 116, 180, 0.5)' }}
+                                        className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-opacity-50 focus:ring-blue-500"
                                         placeholder="Your Company"
                                     />
                                 </div>
@@ -277,8 +289,7 @@ const ContactPage: React.FC = () => {
                                         value={formData.message}
                                         onChange={handleChange}
                                         rows={5}
-                                        className={`w-full px-4 py-2 rounded-lg border ${errors.message ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-opacity-50`}
-                                        // style={{ focusRing: 'rgba(6, 116, 180, 0.5)' }}
+                                        className={`w-full px-4 py-2 rounded-lg border ${errors.message ? 'border-red-500' : 'border-gray-300'} focus:outline-none focus:ring-2 focus:ring-opacity-50 focus:ring-blue-500`}
                                         placeholder="How can we help you?"
                                     ></textarea>
                                     {errors.message && <p className="mt-1 text-sm text-red-500">{errors.message}</p>}
@@ -305,8 +316,6 @@ const ContactPage: React.FC = () => {
                     </div>
                 </div>
             </section>
-
-
 
             {/* FAQ Section */}
             <section className="py-16 bg-white">
@@ -359,8 +368,6 @@ const ContactPage: React.FC = () => {
                     </div>
                 </div>
             </section>
-
-
         </div>
     );
 };
