@@ -125,21 +125,19 @@ const AboutPage: React.FC = () => {
               </div>
 
               {/* Image Content */}
-              <div className="md:w-1/2 w-full flex justify-center mt-8 md:mt-0 animate-slide-up"> {/* Ensured w-full for mobile explicitly */}
-                <div className="relative w-full max-w-md"> {/* This max-w-md will constrain the image area */}
-                  {/* Decorative elements - ensure they are not somehow interfering */}
-                  <div className="absolute -z-10 -top-4 -left-4 w-48 h-48 rounded-full bg-blue-200 opacity-50"></div> {/* Added example bg for visibility */}
-                  <div className="absolute -z-10 bottom-4 -right-4 w-32 h-32 rounded-full bg-green-200 opacity-50"></div> {/* Added example bg for visibility */}
+              <div className="md:w-1/2 w-full flex justify-center mt-8 md:mt-0 animate-slide-up">
+                <div className="relative w-full max-w-md">
+                  {/* Decorative elements */}
+                  <div className="absolute -z-10 -top-4 -left-4 w-48 h-48 rounded-full bg-blue-200 opacity-50"></div>
+                  <div className="absolute -z-10 bottom-4 -right-4 w-32 h-32 rounded-full bg-green-200 opacity-50"></div>
 
-                  {/* Image Container - THIS IS THE CRITICAL PART FOR DIMENSIONS */}
-                  <div className="w-full h-64 rounded-lg relative z-10 overflow-hidden"> {/* Added overflow-hidden as good practice with layout fill & rounded corners */}
-                    <Image
-                      src="https://blogimage.vantagecircle.com/content/images/2023/01/10-Smart-Ways-to-Better-Team-Collaboration-1.png"
+                  {/* Image Container - Modified to properly display the full image */}
+                  <div className="w-full rounded-lg relative z-10 overflow-hidden">
+                    <img
+                      src="https://www.pngplay.com/wp-content/uploads/8/Team-Icon-PNG-HD-Quality.png"
+
                       alt="Team Collaboration"
-                      layout="fill"
-                      objectFit="cover" 
-                      className="rounded-lg"
-                      priority // Added priority for faster loading
+                      className="rounded-lg w-full h-auto object-contain"
                     />
                   </div>
                 </div>
@@ -152,28 +150,8 @@ const AboutPage: React.FC = () => {
         <section className="py-16 md:py-24 bg-[#f0f7fc]">
           <div className="container mx-auto px-6 md:px-16">
             <div className="flex flex-col md:flex-row items-center"> {/* Stacks on mobile, row on md+ */}
-              {/* Image Column */}
-              <div className="md:w-1/2 w-full mb-8 md:mb-0 pr-0 md:pr-12"> {/* Ensures full width on mobile, padding for desktop */}
-                <div className="relative w-full"> {/* This container is relative for the absolute decorative div */}
-                  {/* Decorative background element - ensure it has a background color if you want to see it */}
-                  <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-lg bg-gray-200 opacity-75"></div> {/* Example: Added bg-gray-200 and opacity */}
-
-                  {/* Image's Direct Parent: CRITICAL for dimensions */}
-                  <div className="w-full h-64 relative z-10 rounded-lg overflow-hidden"> {/* Explicit height, relative for Image, overflow for rounded corners */}
-                    <Image
-                      src="https://cdn.prod.website-files.com/657ab76a5c0bbca529ce9a1e/6644ff2e0c176497b76f4077_Cross-Team-Collaboration.png"
-                      alt="Flow Founding Team"
-                      layout="fill"
-                      objectFit="contain" 
-                      className="rounded-lg"
-                      priority // Consider adding if this image is critical for LCP (Largest Contentful Paint)
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Text Content Column */}
-              <div className="md:w-1/2 w-full"> {/* Ensures full width on mobile if not already implied */}
+              {/* Text Content Column - Now first in the DOM order for mobile view */}
+              <div className="md:w-1/2 w-full order-1 md:order-2"> {/* order-1 on mobile, order-2 on md+ */}
                 <span className="text-sm font-semibold uppercase tracking-wider text-[#0674B4]">Our Story</span>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mt-2 mb-6">From Idea to Innovation</h2>
                 <p className="text-gray-700 mb-6">
@@ -191,6 +169,22 @@ const AboutPage: React.FC = () => {
                   <div>
                     <h4 className="font-medium text-gray-900">Over 500 startups joined</h4>
                     <p className="text-sm text-gray-600">Since our launch</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Image Column - Now second in the DOM order for mobile view */}
+              <div className="md:w-1/2 w-full flex justify-center mt-8 md:mt-0 animate-slide-up order-2 md:order-1"> {/* order-2 on mobile, order-1 on md+ */}
+                <div className="relative w-full max-w-md">
+                  {/* Decorative elements */}
+                  <div className="absolute -z-10 -top-4 -left-4 w-48 h-48 rounded-full bg-blue-200 opacity-50"></div>
+                  <div className="absolute -z-10 bottom-4 -right-4 w-32 h-32 rounded-full bg-green-200 opacity-50"></div>
+                  {/* Image Container - Modified to properly display the full image */}
+                  <div className="w-full rounded-lg relative z-10 overflow-hidden">
+                    <img
+                      src="https://png.pngtree.com/png-vector/20221019/ourmid/pngtree-team-leader-and-teamwork-concept-png-image_6327989.png" alt="Team Collaboration"
+                      className="rounded-lg w-full h-auto object-contain"
+                    />
                   </div>
                 </div>
               </div>
