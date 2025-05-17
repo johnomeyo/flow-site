@@ -358,7 +358,7 @@ const ContactPage: React.FC = () => {
                         <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Ideas Into Reality?</h2>
                         <p className="text-lg text-gray-700 mb-8">Join thousands of successful startups and investors who are building the future with Flow.</p>
                         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                            <Link href="/investors/register" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }}>
+                            <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundify&pcampaignid=web_share" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }} target="_blank" rel="noopener noreferrer">
                                 Register as Investor
                             </Link>
                             <Link href="/startups/register" className="px-6 py-3 border rounded-lg hover:bg-white transition-colors text-center font-medium" style={{ borderColor: '#0674B4', color: '#0674B4' }}>

@@ -85,9 +85,9 @@ const InvestorsPage: NextPage = () => {
                 Access carefully vetted, high-growth potential startups and build a diversified portfolio with Flow's strategic investment platform.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link href="/register" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }}>
-                  Join as Investor
-                </Link>
+              <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundify&pcampaignid=web_share" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }} target="_blank" rel="noopener noreferrer">
+  Join as Investor
+</Link>
                 <Link href="/schedule-demo" className="px-6 py-3 border rounded-lg hover:bg-white transition-colors text-center font-medium" style={{ borderColor: '#0674B4', color: '#0674B4' }}>
                   Schedule Demo
                 </Link>
@@ -273,9 +273,9 @@ const InvestorsPage: NextPage = () => {
                 </div>
                 
                 <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                  <Link href="/register" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }}>
-                    Join as Investor
-                  </Link>
+                <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundify&pcampaignid=web_share" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }} target="_blank" rel="noopener noreferrer">
+  Join as Investor
+</Link>
                   <Link href="/contact" className="px-6 py-3 border rounded-lg hover:bg-white transition-colors text-center font-medium" style={{ borderColor: '#0674B4', color: '#0674B4' }}>
                     Contact Us
                   </Link>
