@@ -4,12 +4,12 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import '../globals.css';
-import { 
-  ChartBar, 
-  LineChart, 
-  TrendingUp, 
-  Users, 
-  CheckCircle, 
+import {
+  ChartBar,
+  LineChart,
+  TrendingUp,
+  Users,
+  CheckCircle,
   ArrowRight
 } from 'lucide-react';
 
@@ -85,9 +85,9 @@ const InvestorsPage: NextPage = () => {
                 Access carefully vetted, high-growth potential startups and build a diversified portfolio with Flow's strategic investment platform.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundify&pcampaignid=web_share" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }} target="_blank" rel="noopener noreferrer">
-  Join as Investor
-</Link>
+                <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundify&pcampaignid=web_share" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }} target="_blank" rel="noopener noreferrer">
+                  Join as Investor
+                </Link>
                 <Link href="/schedule-demo" className="px-6 py-3 border rounded-lg hover:bg-white transition-colors text-center font-medium" style={{ borderColor: '#0674B4', color: '#0674B4' }}>
                   Schedule Demo
                 </Link>
@@ -116,11 +116,11 @@ const InvestorsPage: NextPage = () => {
                         <div className="text-2xl font-bold text-green-500">+24.8%</div>
                       </div>
                     </div>
-                    
+
                     <div className="h-32 bg-gray-50 rounded-md w-full flex items-center justify-center">
                       <LineChart size={28} className="text-gray-300" />
                     </div>
-                    
+
                     <div className="grid grid-cols-2 gap-4">
                       <div className="p-3 bg-gray-50 rounded-md">
                         <div className="text-sm text-gray-500">Active Investments</div>
@@ -148,31 +148,31 @@ const InvestorsPage: NextPage = () => {
               Our platform bridges the gap between innovation and capital, providing access to curated investment opportunities.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <StatCard 
-              title="Vetted Startups" 
-              value="500+" 
-              description="Carefully evaluated companies" 
-              icon={<CheckCircle size={20} color="#0674B4" />} 
+            <StatCard
+              title="Vetted Startups"
+              value="500+"
+              description="Carefully evaluated companies"
+              icon={<CheckCircle size={20} color="#0674B4" />}
             />
-            <StatCard 
-              title="Average ROI" 
-              value="27%" 
-              description="Annual return for investors" 
-              icon={<ChartBar size={20} color="#0674B4" />} 
+            <StatCard
+              title="Average ROI"
+              value="27%"
+              description="Annual return for investors"
+              icon={<ChartBar size={20} color="#0674B4" />}
             />
-            <StatCard 
-              title="Investor Network" 
-              value="2,500+" 
-              description="Active investors on platform" 
-              icon={<Users size={20} color="#0674B4" />} 
+            <StatCard
+              title="Investor Network"
+              value="2,500+"
+              description="Active investors on platform"
+              icon={<Users size={20} color="#0674B4" />}
             />
-            <StatCard 
-              title="Success Rate" 
-              value="84%" 
-              description="Portfolio companies thriving" 
-              icon={<TrendingUp size={20} color="#0674B4" />} 
+            <StatCard
+              title="Success Rate"
+              value="84%"
+              description="Portfolio companies thriving"
+              icon={<TrendingUp size={20} color="#0674B4" />}
             />
           </div>
         </div>
@@ -187,7 +187,7 @@ const InvestorsPage: NextPage = () => {
               Our streamlined process provides transparency and efficiency at every step.
             </p>
           </div>
-          
+
           <div className="flex flex-col md:flex-row justify-between items-start max-w-4xl mx-auto">
             <div className="flex-1 flex flex-col items-center text-center mb-8 md:mb-0">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: 'rgba(6, 116, 180, 0.1)' }}>
@@ -198,11 +198,11 @@ const InvestorsPage: NextPage = () => {
                 Complete your investor profile and set investment preferences.
               </p>
             </div>
-            
+
             <div className="hidden md:block">
               <ArrowRight size={24} className="text-gray-300" />
             </div>
-            
+
             <div className="flex-1 flex flex-col items-center text-center mb-8 md:mb-0">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: 'rgba(6, 116, 180, 0.1)' }}>
                 <span className="text-2xl font-bold" style={{ color: '#0674B4' }}>2</span>
@@ -212,11 +212,11 @@ const InvestorsPage: NextPage = () => {
                 Browse curated startups that match your investment criteria.
               </p>
             </div>
-            
+
             <div className="hidden md:block">
               <ArrowRight size={24} className="text-gray-300" />
             </div>
-            
+
             <div className="flex-1 flex flex-col items-center text-center">
               <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: 'rgba(6, 116, 180, 0.1)' }}>
                 <span className="text-2xl font-bold" style={{ color: '#0674B4' }}>3</span>
@@ -242,7 +242,7 @@ const InvestorsPage: NextPage = () => {
                     Join our community of strategic investors and gain access to exclusive startup opportunities with high growth potential.
                   </p>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mt-1">
@@ -252,7 +252,7 @@ const InvestorsPage: NextPage = () => {
                       <span className="font-medium text-gray-800">Curated Opportunities</span> — Access to thoroughly vetted startups with significant growth potential
                     </p>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mt-1">
                       <CheckCircle size={20} color="#0674B4" />
@@ -261,7 +261,7 @@ const InvestorsPage: NextPage = () => {
                       <span className="font-medium text-gray-800">Investor Resources</span> — Data-driven insights and analytics to inform your investment decisions
                     </p>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="flex-shrink-0 mt-1">
                       <CheckCircle size={20} color="#0674B4" />
@@ -271,27 +271,27 @@ const InvestorsPage: NextPage = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundify&pcampaignid=web_share" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }} target="_blank" rel="noopener noreferrer">
-  Join as Investor
-</Link>
+                  <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundify&pcampaignid=web_share" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }} target="_blank" rel="noopener noreferrer">
+                    Join as Investor
+                  </Link>
                   <Link href="/contact" className="px-6 py-3 border rounded-lg hover:bg-white transition-colors text-center font-medium" style={{ borderColor: '#0674B4', color: '#0674B4' }}>
                     Contact Us
                   </Link>
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 gap-5">
-                <Testimonial 
-                  quote="Flow has transformed how I approach startup investing. Their vetting process and portfolio tracking tools are exceptional." 
-                  author="Sarah Chen" 
-                  position="Angel Investor" 
+                <Testimonial
+                  quote="Flow has transformed how I approach startup investing. Their vetting process and portfolio tracking tools are exceptional."
+                  author="Sarah Chen"
+                  position="Angel Investor"
                 />
-                <Testimonial 
-                  quote="The quality of startups on Flow is outstanding. I've made three investments that have already shown significant returns." 
-                  author="Michael Reynolds" 
-                  position="Venture Partner" 
+                <Testimonial
+                  quote="The quality of startups on Flow is outstanding. I've made three investments that have already shown significant returns."
+                  author="Michael Reynolds"
+                  position="Venture Partner"
                 />
               </div>
             </div>

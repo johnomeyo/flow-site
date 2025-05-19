@@ -333,7 +333,7 @@ const AboutPage: React.FC = () => {
                 Whether you're a startup seeking investment or an investor looking for opportunities, Flow connects you with the right partners.
               </p>
               <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link href="/entrepreneurs" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium bg-[#0674B4]">
+                <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundora&pcampaignid=web_share" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium bg-[#0674B4]">
                   For Startups
                 </Link>
                 <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundify&pcampaignid=web_share" className="px-6 py-3 border rounded-lg hover:bg-white transition-colors text-center font-medium border-[#0674B4] text-[#0674B4]" target="_blank" rel="noopener noreferrer">

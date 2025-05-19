@@ -89,7 +89,7 @@ export default function PremiumPage() {
         </p>
         <div className="mb-4 p-4 bg-green-100 border border-green-300 text-green-700 rounded-xl">
           <strong>🎉 Limited-Time Launch Offer:</strong> Get Premium for only{" "}
-          <span className="font-bold">Ksh 250</span> instead of 500!
+          <span className="font-bold">Ksh 500</span> instead of 750!
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -114,15 +114,15 @@ export default function PremiumPage() {
               How to Pay via M-Pesa
             </h2>
             <p className="mb-2 text-left text-gray-700">
-              Send <span className="font-bold text-blue-800">Ksh 250</span> to
+              Send <span className="font-bold text-blue-800">Ksh 500</span> to
               the Paybill below:
             </p>
             <div className="text-left">
               <p>
-                <span className="font-bold">Paybill:</span> 123456
+                <span className="font-bold">Paybill:</span> 522522
               </p>
               <p>
-                <span className="font-bold">Account:</span> flowpremium
+                <span className="font-bold">Account:</span> 1289891117
               </p>
             </div>
             <p className="mt-4 text-sm text-gray-600">

@@ -361,7 +361,7 @@ const ContactPage: React.FC = () => {
                             <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundify&pcampaignid=web_share" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }} target="_blank" rel="noopener noreferrer">
                                 Register as Investor
                             </Link>
-                            <Link href="/startups/register" className="px-6 py-3 border rounded-lg hover:bg-white transition-colors text-center font-medium" style={{ borderColor: '#0674B4', color: '#0674B4' }}>
+                            <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundora&pcampaignid=web_share" className="px-6 py-3 border rounded-lg hover:bg-white transition-colors text-center font-medium" style={{ borderColor: '#0674B4', color: '#0674B4' }}>
                                 Register as Startup
                             </Link>
                         </div>
