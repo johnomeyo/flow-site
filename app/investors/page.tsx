@@ -504,7 +504,7 @@ const InvestorsPage: NextPage = () => {
                     <div className="flex justify-between items-center">
                       <div>
                         <div className="text-sm text-gray-500">Portfolio Value</div>
-                        <div className="text-2xl font-bold text-gray-800">$2.4M</div>
+                        <div className="text-2xl font-bold text-gray-800">$200K</div>
                       </div>
                       <div>
                         <div className="text-sm text-gray-500">Growth YTD</div>
@@ -554,7 +554,7 @@ const InvestorsPage: NextPage = () => {
             <motion.div variants={fadeIn}>
               <StatCard
                 title="Vetted Startups"
-                value="500+"
+                value="100+"
                 description="Carefully evaluated companies"
                 icon={<CheckCircle size={20} color="#0674B4" />}
               />
@@ -570,7 +570,7 @@ const InvestorsPage: NextPage = () => {
             <motion.div variants={fadeIn}>
               <StatCard
                 title="Investor Network"
-                value="2,500+"
+                value="50+"
                 description="Active investors on platform"
                 icon={<Users size={20} color="#0674B4" />}
               />

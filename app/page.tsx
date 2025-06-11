@@ -241,8 +241,6 @@
 
 
 
-
-
 "use client";
 
 import Link from 'next/link';
@@ -252,23 +250,23 @@ import ScreenshotShowcase from './components/ScreenshotShowcase';
 // Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 60 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { 
-      duration: 0.8, 
-      ease: [0.25, 0.1, 0.25, 1] 
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.1, 0.25, 1]
     }
   }
 };
 
 const fadeIn = {
   hidden: { opacity: 0 },
-  visible: { 
+  visible: {
     opacity: 1,
-    transition: { 
-      duration: 0.8, 
-      ease: [0.25, 0.1, 0.25, 1] 
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.1, 0.25, 1]
     }
   }
 };
@@ -284,24 +282,24 @@ const staggerContainer = {
 
 const textReveal = {
   hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
-    transition: { 
-      duration: 0.6, 
-      ease: [0.25, 0.1, 0.25, 1] 
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1]
     }
   }
 };
 
 const scaleIn = {
   hidden: { opacity: 0, scale: 0.8 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     scale: 1,
-    transition: { 
-      duration: 0.8, 
-      ease: [0.25, 0.1, 0.25, 1] 
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.1, 0.25, 1]
     }
   }
 };
@@ -313,25 +311,25 @@ export default function Home() {
       <section className="py-16 md:py-24 overflow-hidden" style={{ backgroundColor: '#f0f7fc' }}>
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center justify-between">
-            <motion.div 
+            <motion.div
               className="lg:w-1/2 mb-12 lg:mb-0"
               variants={staggerContainer}
               initial="hidden"
               animate="visible"
             >
-              <motion.h1 
+              <motion.h1
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4"
                 variants={textReveal}
               >
                 Where Ideas <span style={{ color: '#0674B4' }}>Flow</span> Into Reality
               </motion.h1>
-              <motion.p 
+              <motion.p
                 className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg"
                 variants={textReveal}
               >
                 Connecting visionary entrepreneurs with strategic investors to transform groundbreaking ideas into successful ventures.
               </motion.p>
-              <motion.div 
+              <motion.div
                 className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
                 variants={textReveal}
               >
@@ -342,7 +340,7 @@ export default function Home() {
             </motion.div>
 
             {/* Modified hero image - better on mobile */}
-            <motion.div 
+            <motion.div
               className="w-full lg:w-1/2"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -388,7 +386,7 @@ export default function Home() {
       {/* How It Works Section */}
       <section className="py-16 md:py-24" style={{ backgroundColor: '#C0DCED' }}>
         <div className="container mx-auto px-6">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial="hidden"
             whileInView="visible"
@@ -399,7 +397,7 @@ export default function Home() {
             <p className="text-gray-700 max-w-2xl mx-auto">Our streamlined process connects innovative startups with the right investors, making fundraising more efficient and effective.</p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-8 relative"
             initial="hidden"
             whileInView="visible"
@@ -410,7 +408,7 @@ export default function Home() {
             <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -z-10"></div>
 
             {/* Step 1 */}
-            <motion.div 
+            <motion.div
               className="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-gray-100 relative hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               variants={scaleIn}
             >
@@ -421,7 +419,7 @@ export default function Home() {
             </motion.div>
 
             {/* Step 2 */}
-            <motion.div 
+            <motion.div
               className="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-gray-100 relative hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 md:mt-12"
               variants={scaleIn}
             >
@@ -432,7 +430,7 @@ export default function Home() {
             </motion.div>
 
             {/* Step 3 */}
-            <motion.div 
+            <motion.div
               className="bg-white rounded-xl p-6 md:p-8 shadow-lg border border-gray-100 relative hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               variants={scaleIn}
             >
@@ -464,20 +462,20 @@ export default function Home() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row items-center lg:items-stretch gap-12">
             {/* Left content */}
-            <motion.div 
+            <motion.div
               className="lg:w-1/2 flex flex-col justify-center"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={staggerContainer}
             >
-              <motion.h2 
+              <motion.h2
                 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900"
                 variants={fadeInUp}
               >
                 Join Our Growing <span style={{ color: '#0674B4' }}>Community</span>
               </motion.h2>
-              <motion.p 
+              <motion.p
                 className="text-gray-700 mb-8 text-lg"
                 variants={fadeInUp}
               >
@@ -485,28 +483,28 @@ export default function Home() {
               </motion.p>
 
               {/* Stats in small floating cards */}
-              <motion.div 
+              <motion.div
                 className="grid grid-cols-2 gap-6 mb-8"
                 variants={staggerContainer}
               >
-                <motion.div 
+                <motion.div
                   className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
                   variants={scaleIn}
                 >
-                  <div className="font-bold text-3xl" style={{ color: '#0674B4' }}>1,000+</div>
+                  <div className="font-bold text-3xl" style={{ color: '#0674B4' }}>100+</div>
                   <div className="text-gray-600">Startups Onboarded</div>
                 </motion.div>
-                <motion.div 
+                <motion.div
                   className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
                   variants={scaleIn}
                 >
-                  <div className="font-bold text-3xl" style={{ color: '#0674B4' }}>$500M+</div>
+                  <div className="font-bold text-3xl" style={{ color: '#0674B4' }}>$200K+</div>
                   <div className="text-gray-600">Funds Raised</div>
                 </motion.div>
               </motion.div>
 
               {/* CTA */}
-              <motion.div 
+              <motion.div
                 className="flex flex-col sm:flex-row gap-4"
                 variants={fadeInUp}
               >
@@ -528,7 +526,7 @@ export default function Home() {
             </motion.div>
 
             {/* Right side - abstract illustration */}
-            <motion.div 
+            <motion.div
               className="lg:w-1/2"
               initial="hidden"
               whileInView="visible"
@@ -541,7 +539,7 @@ export default function Home() {
                 <div className="absolute -z-10 -bottom-6 -left-6 w-48 h-48 rounded-full opacity-10" style={{ backgroundColor: '#0674B4' }}></div>
 
                 {/* Connection illustration */}
-                <motion.div 
+                <motion.div
                   className="bg-white rounded-2xl shadow-xl p-8 relative z-10"
                   variants={scaleIn}
                 >
@@ -602,6 +600,61 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* --- */}
+
+      {/* New: Ready to Accelerate Your Vision Section */}
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#C0DCED' }}>
+        <div className="container mx-auto px-6 text-center">
+          <motion.h2
+            className="text-3xl md:text-4xl font-bold mb-6 text-gray-900"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+          >
+            Ready to Accelerate Your <span style={{ color: '#0674B4' }}>Vision</span>?
+          </motion.h2>
+          <motion.p
+            className="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={fadeInUp}
+          >
+            Whether you're an ambitious entrepreneur seeking capital or a seasoned investor looking for the next big opportunity, Flow provides the platform you need to succeed.
+          </motion.p>
+          <motion.div
+            className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={staggerContainer}
+          >
+            <motion.div variants={scaleIn}>
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundora&pcampaignid=web_share"
+                className="px-8 py-4 text-white rounded-lg hover:bg-opacity-90 transition-colors font-bold text-lg inline-block"
+                style={{ backgroundColor: '#0674B4' }}
+              >
+                Get Started as an Entrepreneur
+              </Link>
+            </motion.div>
+            <motion.div variants={scaleIn}>
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundify&pcampaignid=web_share"
+                target='_blank'
+                className="px-8 py-4 border rounded-lg hover:bg-white transition-colors font-bold text-lg inline-block"
+                style={{ borderColor: '#0674B4', color: '#0674B4' }}
+              >
+                Explore Investor Opportunities
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* --- */}
 
       {/* Footer */}
     </div>

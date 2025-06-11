@@ -434,7 +434,7 @@ const AnimateOnScroll: React.FC<{ children: React.ReactNode; className?: string 
 // Data (remain unchanged)
 const teamMembers: TeamMember[] = [
   {
-    name: "Sarah Chen",
+    name: "Sarah Wambui",
     role: "CEO & Co-Founder",
     bio: "Former VC with 10+ years experience in tech startup investments.",
     socialLinks: {
@@ -443,7 +443,7 @@ const teamMembers: TeamMember[] = [
     }
   },
   {
-    name: "Marcus Reynolds",
+    name: "Marcus Obuya",
     role: "CTO & Co-Founder",
     bio: "Serial entrepreneur with exits in fintech and AI sectors.",
     socialLinks: {
@@ -461,7 +461,7 @@ const teamMembers: TeamMember[] = [
     }
   },
   {
-    name: "Rafael Gomez",
+    name: "Rafael Kibet",
     role: "Chief Product Officer",
     bio: "Product visionary with background at leading tech platforms.",
     socialLinks: {
@@ -473,16 +473,16 @@ const teamMembers: TeamMember[] = [
 
 const testimonials: TestimonialType[] = [
   {
-    name: "Jessica Kim",
+    name: "Jessica Odhiambo",
     role: "Founder",
-    company: "EcoTech Solutions",
+    company: "",
     content: "Flow transformed our fundraising journey. Within weeks, we connected with investors who not only provided capital but brought strategic expertise that accelerated our growth.",
     rating: 5
   },
   {
-    name: "Michael Torres",
+    name: "Michael Kimani",
     role: "Managing Partner",
-    company: "Horizon Ventures",
+    company: "",
     content: "As an investor, Flow has significantly improved our deal flow quality. The matching algorithm consistently connects us with startups that align with our investment thesis and values.",
     rating: 5
   }
@@ -609,7 +609,7 @@ const AboutPage: React.FC = () => {
                     <FaRocket className="text-[#0674B4] text-xl" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900">Over 500 startups joined</h4>
+                    <h4 className="font-medium text-gray-900">Over 100 startups joined</h4>
                     <p className="text-sm text-gray-600">Since our launch</p>
                   </div>
                 </motion.div>
@@ -735,19 +735,19 @@ const AboutPage: React.FC = () => {
               variants={staggerContainer}
             >
               <motion.div variants={fadeIn} className="p-6">
-                <h3 className="text-4xl font-bold text-[#0674B4] mb-2">500+</h3>
+                <h3 className="text-4xl font-bold text-[#0674B4] mb-2">100+</h3>
                 <p className="text-gray-700">Startups Funded</p>
               </motion.div>
               <motion.div variants={fadeIn} className="p-6">
-                <h3 className="text-4xl font-bold text-[#0674B4] mb-2">$2B+</h3>
+                <h3 className="text-4xl font-bold text-[#0674B4] mb-2">$200K+</h3>
                 <p className="text-gray-700">Capital Raised</p>
               </motion.div>
               <motion.div variants={fadeIn} className="p-6">
-                <h3 className="text-4xl font-bold text-[#0674B4] mb-2">350+</h3>
+                <h3 className="text-4xl font-bold text-[#0674B4] mb-2">50+</h3>
                 <p className="text-gray-700">Investor Partners</p>
               </motion.div>
               <motion.div variants={fadeIn} className="p-6">
-                <h3 className="text-4xl font-bold text-[#0674B4] mb-2">92%</h3>
+                <h3 className="text-4xl font-bold text-[#0674B4] mb-2">84%</h3>
                 <p className="text-gray-700">Success Rate</p>
               </motion.div>
             </motion.div>

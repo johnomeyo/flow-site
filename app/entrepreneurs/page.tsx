@@ -614,7 +614,7 @@ const EntrepreneursPage: NextPage = () => {
                 Connect with the right investors, secure funding, and scale your startup with strategic support on the Flow platform.
               </motion.p>
               <motion.div variants={fadeIn} className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundora&pcampaignid=web_share" className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }} target="_blank" rel="noopener noreferrer">
+                <Link href="https://play.google.com/store/apps/details?id=com.flowfundingorg.fundora&pcampaignid=web_share"  className="px-6 py-3 text-white rounded-lg hover:bg-opacity-90 transition-colors text-center font-medium" style={{ backgroundColor: '#0674B4' }} target="_blank" rel="noopener noreferrer">
                   Join as Founder
                 </Link>
                 <Link href="/schedule-demo" className="px-6 py-3 border rounded-lg hover:bg-white transition-colors text-center font-medium" style={{ borderColor: '#0674B4', color: '#0674B4' }}>
@@ -642,17 +642,17 @@ const EntrepreneursPage: NextPage = () => {
                       </div>
                       <div>
                         <div className="text-sm text-gray-500">Raised</div>
-                        <div className="text-2xl font-bold text-green-500">$875K</div>
+                        <div className="text-2xl font-bold text-green-500">$200K</div>
                       </div>
                     </div>
 
                     <div>
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm text-gray-500">58% Complete</span>
-                        <span className="text-sm text-gray-500">$625K to go</span>
+                        <span className="text-sm text-gray-500">15% Complete</span>
+                        <span className="text-sm text-gray-500">$1.3M to go</span>
                       </div>
                       <div className="h-3 w-full bg-gray-100 rounded-full overflow-hidden">
-                        <div className="h-full rounded-full" style={{ width: '58%', backgroundColor: '#0674B4' }}></div>
+                        <div className="h-full rounded-full" style={{ width: '13%', backgroundColor: '#0674B4' }}></div>
                       </div>
                     </div>
 
@@ -872,19 +872,19 @@ const EntrepreneursPage: NextPage = () => {
             <motion.div variants={fadeIn}><FundingStage
               title="Pre-Seed"
               description="For startups validating their concept and building their initial product."
-              funding="$50K - $500K"
+              funding="$1K - $10K"
               icon={<LightbulbIcon size={20} color="#0674B4" />}
             /></motion.div>
             <motion.div variants={fadeIn}><FundingStage
               title="Seed"
               description="For startups with an MVP demonstrating early traction and user adoption."
-              funding="$500K - $3M"
+              funding="$10K - $50K"
               icon={<Zap size={20} color="#0674B4" />}
             /></motion.div>
             <motion.div variants={fadeIn}><FundingStage
               title="Series A"
               description="For startups scaling their business with proven revenue models."
-              funding="$3M - $15M"
+              funding="$50K - $500K"
               icon={<RocketIcon size={20} color="#0674B4" />}
             /></motion.div>
           </motion.div>

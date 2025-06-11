@@ -16,51 +16,51 @@ interface Job {
 
 // Sample job data (you would fetch this from your API)
 const sampleJobs: Job[] = [
-  {
-    id: 'job-001',
-    title: 'Frontend Developer',
-    department: 'Engineering',
-    location: 'Remote',
-    type: 'Full-time',
-    description: 'We are looking for a skilled Frontend Developer to join our team and help build exceptional user experiences for our platform.',
-    requirements: [
-      'Strong proficiency in React, Next.js, and TypeScript',
-      'Experience with Tailwind CSS',
-      '3+ years of professional experience in frontend development',
-      'Excellent problem-solving skills and attention to detail'
-    ],
-    postedDate: '2025-05-01'
-  },
-  {
-    id: 'job-002',
-    title: 'Product Manager',
-    department: 'Product',
-    location: 'Remote',
-    type: 'Full-time',
-    description: 'We\'re seeking a strategic Product Manager to help define and execute our product roadmap, working closely with engineering, design, and business teams.',
-    requirements: [
-      '4+ years of product management experience',
-      'Experience in fintech or startup ecosystems',
-      'Strong analytical and communication skills',
-      'Ability to translate business goals into product requirements'
-    ],
-    postedDate: '2025-05-05'
-  },
-  {
-    id: 'job-003',
-    title: 'Growth Marketing Specialist',
-    department: 'Marketing',
-    location: 'Remote ',
-    type: 'Full-time',
-    description: 'Join our marketing team to drive acquisition strategies and help connect more investors with promising startups on our platform.',
-    requirements: [
-      'Experience with B2B SaaS growth marketing',
-      'Strong understanding of funnel optimization and conversion metrics',
-      'Familiarity with the startup/investment landscape',
-      'Data-driven approach to marketing strategy'
-    ],
-    postedDate: '2025-05-10'
-  }
+  // {
+  //   id: 'job-001',
+  //   title: 'Frontend Developer',
+  //   department: 'Engineering',
+  //   location: 'Remote',
+  //   type: 'Full-time',
+  //   description: 'We are looking for a skilled Frontend Developer to join our team and help build exceptional user experiences for our platform.',
+  //   requirements: [
+  //     'Strong proficiency in React, Next.js, and TypeScript',
+  //     'Experience with Tailwind CSS',
+  //     '3+ years of professional experience in frontend development',
+  //     'Excellent problem-solving skills and attention to detail'
+  //   ],
+  //   postedDate: '2025-05-01'
+  // },
+  // {
+  //   id: 'job-002',
+  //   title: 'Product Manager',
+  //   department: 'Product',
+  //   location: 'Remote',
+  //   type: 'Full-time',
+  //   description: 'We\'re seeking a strategic Product Manager to help define and execute our product roadmap, working closely with engineering, design, and business teams.',
+  //   requirements: [
+  //     '4+ years of product management experience',
+  //     'Experience in fintech or startup ecosystems',
+  //     'Strong analytical and communication skills',
+  //     'Ability to translate business goals into product requirements'
+  //   ],
+  //   postedDate: '2025-05-05'
+  // },
+  // {
+  //   id: 'job-003',
+  //   title: 'Growth Marketing Specialist',
+  //   department: 'Marketing',
+  //   location: 'Remote ',
+  //   type: 'Full-time',
+  //   description: 'Join our marketing team to drive acquisition strategies and help connect more investors with promising startups on our platform.',
+  //   requirements: [
+  //     'Experience with B2B SaaS growth marketing',
+  //     'Strong understanding of funnel optimization and conversion metrics',
+  //     'Familiarity with the startup/investment landscape',
+  //     'Data-driven approach to marketing strategy'
+  //   ],
+  //   postedDate: '2025-05-10'
+  // }
 ];
 
 export default function Careers() {
@@ -328,7 +328,7 @@ export default function Careers() {
               <p className="mt-2 text-base text-gray-500 max-w-md mx-auto">
                 We don't have any job openings at the moment, but we're always looking for talented people.
               </p>
-              <div className="mt-8">
+              {/* <div className="mt-8">
                 <button
                   type="button"
                   onClick={() => {
@@ -339,7 +339,7 @@ export default function Careers() {
                 >
                   Submit your resume anyway
                 </button>
-              </div>
+              </div> */}
             </div>
           )}
         </div>
