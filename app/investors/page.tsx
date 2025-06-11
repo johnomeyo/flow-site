@@ -421,10 +421,10 @@ const InvestorsPage: NextPage = () => {
         {/* Open Graph Tags - For social media sharing (Facebook, LinkedIn, etc.) */}
         <meta property="og:title" content="Strategic Investment Opportunities | Flow for Investors" />
         <meta property="og:description" content="Discover high-growth potential startup investment opportunities on Flow. Connect with visionary entrepreneurs and diversify your portfolio with curated deal flow." />
-        <meta property="og:url" content="https://www.flowfundsapp.co.ke/investors" /> {/* IMPORTANT: Replace with the actual URL of this page */}
+        <meta property="og:url" content="https://flowfundsapp.co.ke/investors" /> {/* IMPORTANT: Replace with the actual URL of this page */}
         <meta property="og:site_name" content="Flow" />
         <meta property="og:type" content="website" /> {/* Use 'website' for general pages, 'article' for blog posts */}
-        {/* <meta property="og:image" content="https://www.flowfundsapp.co.ke/og-image-investors.jpg" /> IMPORTANT: Create a specific image for investors */}
+        {/* <meta property="og:image" content="https://flowfundsapp.co.ke/og-image-investors.jpg" /> IMPORTANT: Create a specific image for investors */}
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Flow: Investment opportunities for investors" />
@@ -436,11 +436,11 @@ const InvestorsPage: NextPage = () => {
         <meta name="twitter:creator" content="@yourFlowTwitterHandle" /> {/* IMPORTANT: Replace with your Twitter handle */}
         <meta name="twitter:title" content="Strategic Investment Opportunities | Flow for Investors" />
         <meta name="twitter:description" content="Discover high-growth potential startup investment opportunities on Flow. Connect with visionary entrepreneurs and diversify your portfolio with curated deal flow." />
-        {/* <meta name="twitter:image" content="https://www.flowfundsapp.co.ke/twitter-image-investors.jpg" /> IMPORTANT: Create a specific image for investors */}
+        {/* <meta name="twitter:image" content="https://flowfundsapp.co.ke/twitter-image-investors.jpg" /> IMPORTANT: Create a specific image for investors */}
         <meta name="twitter:image:alt" content="Flow: Investment opportunities for investors" />
 
         {/* Canonical URL - Helps prevent duplicate content issues if page is accessible via multiple URLs */}
-        <link rel="canonical" href="https://www.flowfundsapp.co.ke/investors" /> {/* IMPORTANT: Replace with the actual canonical URL of this page */}
+        <link rel="canonical" href="https://flowfundsapp.co.ke/investors" /> {/* IMPORTANT: Replace with the actual canonical URL of this page */}
 
         {/* Favicons */}
         <link rel="icon" href="/favicon.ico" />
