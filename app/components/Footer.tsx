@@ -2,14 +2,22 @@
 
 import Link from 'next/link'
 
+import Image from 'next/image'
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="h-6 w-6 rounded-full" style={{ backgroundColor: '#0674B4' }}></div>
+            <div className="flex items-center space-x-0 mb-4">
+              <Image
+                src="/logo_png.png"
+                alt="Flow Logo"
+                width={52}
+                height={52}
+                className="object-contain"
+              />
               <span className="font-bold text-xl text-white">Flow</span>
             </div>
             <p className="text-sm">
@@ -21,7 +29,6 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link href="/entrepreneurs" className="hover:text-blue-400 transition-colors">For Entrepreneurs</Link></li>
               <li><Link href="/investors" className="hover:text-blue-400 transition-colors">For Investors</Link></li>
-              {/* <li><Link href="/success-stories" className="hover:text-blue-400 transition-colors">Success Stories</Link></li> */}
             </ul>
           </div>
           <div>
@@ -46,18 +53,24 @@ const Footer = () => {
           <div className="flex space-x-4 mt-4 md:mt-0">
             {/* Social Icons */}
             {[
-              { name: 'Twitter', href: '#', icon: (
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8.29 20.251c7.547 0..." />
-                </svg>) },
-              { name: 'LinkedIn', href: '#', icon: (
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M19 0h-14c..." clipRule="evenodd" />
-                </svg>) },
-              { name: 'Instagram', href: '#', icon: (
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M12.315 2..." clipRule="evenodd" />
-                </svg>) }
+              {
+                name: 'Twitter', href: '#', icon: (
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8.29 20.251c7.547 0..." />
+                  </svg>)
+              },
+              {
+                name: 'LinkedIn', href: '#', icon: (
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path fillRule="evenodd" d="M19 0h-14c..." clipRule="evenodd" />
+                  </svg>)
+              },
+              {
+                name: 'Instagram', href: '#', icon: (
+                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path fillRule="evenodd" d="M12.315 2..." clipRule="evenodd" />
+                  </svg>)
+              }
             ].map(({ name, href, icon }) => (
               <a key={name} href={href} className="text-gray-400 hover:text-white transition-colors" aria-label={name}>
                 {icon}

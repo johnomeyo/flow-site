@@ -1,8 +1,9 @@
+
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import Link from 'next/link';
-
+import Image from 'next/image';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
@@ -37,9 +38,15 @@ const Navbar = () => {
         {/* Logo and Brand */}
         <div
           onClick={() => handleNavLinkClick('/')}
-          className="flex items-center space-x-2 cursor-pointer"
+          className="flex items-center  cursor-pointer"
         >
-          <div className="h-8 w-8 rounded-full" style={{ backgroundColor: '#0674B4' }}></div>
+          <Image
+            src="/logo_png.png"
+            alt="Flow Logo"
+            width={52}
+            height={52}
+            className="object-contain"
+          />
           <span className="font-bold text-2xl" style={{ color: '#0674B4' }}>Flow</span>
         </div>
 
