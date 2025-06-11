@@ -545,10 +545,53 @@ const FundingStage: React.FC<FundingStageProps> = ({ title, description, funding
 const EntrepreneursPage: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Flow | For Entrepreneurs</title>
-        <meta name="description" content="Turn your startup vision into reality with funding from strategic investors." />
+<Head>
+        {/* Basic Metadata - Unique to this page, optimized for entrepreneurs */}
+        <title>Secure Startup Funding | Flow for Entrepreneurs</title>
+        <meta name="description" content="Turn your groundbreaking startup vision into reality. Flow connects ambitious entrepreneurs with the right strategic investors to secure seed, early-stage, and growth capital. Get funded on Flow." />
+        {/* Keywords specific to entrepreneurs seeking funding, including regional focus */}
+        <meta name="keywords" content="startup funding, raise capital, seed funding, early-stage funding, venture capital for startups, angel investors for entrepreneurs, startup accelerators, business growth funding, pitch deck advice, entrepreneur resources, innovation funding, tech startup funding, fintech startup funding, sustainable startup funding, Kenyan startups, Nairobi entrepreneurs, Africa startup capital" />
+
+        {/* Open Graph Tags - For rich social media previews (Facebook, LinkedIn, etc.) */}
+        <meta property="og:title" content="Secure Startup Funding | Flow for Entrepreneurs" />
+        <meta property="og:description" content="Turn your groundbreaking startup vision into reality. Flow connects ambitious entrepreneurs with the right strategic investors to secure seed, early-stage, and growth capital. Get funded on Flow." />
+        <meta property="og:url" content="https://flowfundsapp.co.ke/entrepreneurs" /> {/* IMPORTANT: Use your actual URL for this page */}
+        <meta property="og:site_name" content="Flow" />
+        <meta property="og:type" content="website" /> {/* Use 'website' for general pages */}
+        {/* <meta property="og:image" content="https://flowfundsapp.co.ke/og-image-entrepreneurs.jpg" /> IMPORTANT: Create a specific image for entrepreneurs */}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Flow: Funding opportunities for entrepreneurs" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Twitter Card Tags - For rich Twitter previews */}
+        <meta name="twitter:card" content="summary_large_image" /> {/* Use 'summary_large_image' for a prominent image */}
+        <meta name="twitter:site" content="@yourFlowTwitterHandle" /> {/* IMPORTANT: Replace with your Twitter handle */}
+        <meta name="twitter:creator" content="@yourFlowTwitterHandle" /> {/* IMPORTANT: Replace with your Twitter handle */}
+        <meta name="twitter:title" content="Secure Startup Funding | Flow for Entrepreneurs" />
+        <meta name="twitter:description" content="Turn your groundbreaking startup vision into reality. Flow connects ambitious entrepreneurs with the right strategic investors to secure seed, early-stage, and growth capital. Get funded on Flow." />
+        {/* <meta name="twitter:image" content="https://flowfundsapp.co.ke/twitter-image-entrepreneurs.jpg" /> IMPORTANT: Create a specific image for entrepreneurs */}
+        <meta name="twitter:image:alt" content="Flow: Funding opportunities for entrepreneurs" />
+
+        {/* Canonical URL - Helps prevent duplicate content issues */}
+        <link rel="canonical" href="https://flowfundsapp.co.ke/entrepreneurs" /> {/* IMPORTANT: Use your actual canonical URL for this page */}
+
+        {/* Favicons (assuming these are in your public directory and consistent across pages) */}
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#0674B4" /> {/* Consistent brand color */}
+
+        {/* Viewport - Essential for responsive design */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        {/* Robots - Instructs search engine crawlers */}
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+        {/* Add any other specific meta tags if needed */}
       </Head>
 
       {/* Hero Section */}

@@ -411,10 +411,53 @@ const Testimonial: React.FC<TestimonialProps> = ({ quote, author, position }) =>
 const InvestorsPage: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Flow | For Investors</title>
-        <meta name="description" content="Strategic investment opportunities for high-growth potential startups." />
+<Head>
+        {/* Basic Metadata - Unique to this page */}
+        <title>Strategic Investment Opportunities | Flow for Investors</title>
+        <meta name="description" content="Discover high-growth potential startup investment opportunities on Flow. Connect with visionary entrepreneurs and diversify your portfolio with curated deal flow." />
+        {/* Keywords specific to this page's content */}
+        <meta name="keywords" content="startup investment, venture capital opportunities, angel investing, high-growth startups, investor platform, private equity, capital allocation, deal flow, tech investment, fintech investment, sustainable investment, Africa startup investment, Kenya venture capital" />
+
+        {/* Open Graph Tags - For social media sharing (Facebook, LinkedIn, etc.) */}
+        <meta property="og:title" content="Strategic Investment Opportunities | Flow for Investors" />
+        <meta property="og:description" content="Discover high-growth potential startup investment opportunities on Flow. Connect with visionary entrepreneurs and diversify your portfolio with curated deal flow." />
+        <meta property="og:url" content="https://www.flowfundsapp.co.ke/investors" /> {/* IMPORTANT: Replace with the actual URL of this page */}
+        <meta property="og:site_name" content="Flow" />
+        <meta property="og:type" content="website" /> {/* Use 'website' for general pages, 'article' for blog posts */}
+        {/* <meta property="og:image" content="https://www.flowfundsapp.co.ke/og-image-investors.jpg" /> IMPORTANT: Create a specific image for investors */}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Flow: Investment opportunities for investors" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Twitter Card Tags - For Twitter sharing */}
+        <meta name="twitter:card" content="summary_large_image" /> {/* Use 'summary_large_image' for a prominent image */}
+        <meta name="twitter:site" content="@yourFlowTwitterHandle" /> {/* IMPORTANT: Replace with your Twitter handle */}
+        <meta name="twitter:creator" content="@yourFlowTwitterHandle" /> {/* IMPORTANT: Replace with your Twitter handle */}
+        <meta name="twitter:title" content="Strategic Investment Opportunities | Flow for Investors" />
+        <meta name="twitter:description" content="Discover high-growth potential startup investment opportunities on Flow. Connect with visionary entrepreneurs and diversify your portfolio with curated deal flow." />
+        {/* <meta name="twitter:image" content="https://www.flowfundsapp.co.ke/twitter-image-investors.jpg" /> IMPORTANT: Create a specific image for investors */}
+        <meta name="twitter:image:alt" content="Flow: Investment opportunities for investors" />
+
+        {/* Canonical URL - Helps prevent duplicate content issues if page is accessible via multiple URLs */}
+        <link rel="canonical" href="https://www.flowfundsapp.co.ke/investors" /> {/* IMPORTANT: Replace with the actual canonical URL of this page */}
+
+        {/* Favicons */}
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" /> {/* For Progressive Web Apps */}
+        <meta name="theme-color" content="#0674B4" /> {/* Your brand's primary color for browser UI */}
+
+        {/* Viewport - Essential for responsive design */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        {/* Robots - Instructs search engine crawlers */}
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+        {/* Add any other specific meta tags if needed, e.g., for specific search console verification on this page */}
       </Head>
 
       {/* Hero Section */}

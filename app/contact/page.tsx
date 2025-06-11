@@ -544,7 +544,7 @@ const ContactPage: React.FC = () => {
                 <meta property="og:title" content="Contact Us | Flow" />
                 <meta property="og:description" content="Connect with Flow - the platform that bridges startups with investors." />
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://flowventures.com/contact" />
+                <meta property="og:url" content="https://flowfundsapp.co.ke/contact" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 

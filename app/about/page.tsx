@@ -491,10 +491,53 @@ const testimonials: TestimonialType[] = [
 const AboutPage: React.FC = () => {
   return (
     <>
-      <Head>
-        <title>About Flow | Connecting Startups with Investors</title>
-        <meta name="description" content="Learn about Flow's mission to connect visionary entrepreneurs with strategic investors." />
+<Head>
+        {/* Basic Metadata - Unique to this page */}
+        <title>About Flow | Bridging Startups & Investors for Innovation</title>
+        <meta name="description" content="Discover Flow's mission to empower visionary entrepreneurs by connecting them with strategic investors. Learn how we facilitate funding, foster innovation, and drive economic growth in Kenya and across Africa." />
+        {/* Keywords specific to your About Us page */}
+        <meta name="keywords" content="about Flow, Flow mission, startup funding platform, investor-startup connection, entrepreneurship ecosystem, innovation hub, venture capital Kenya, African startups, economic growth, Flow company, Flow vision" />
+
+        {/* Open Graph Tags - For rich social media previews (Facebook, LinkedIn, etc.) */}
+        <meta property="og:title" content="About Flow | Bridging Startups & Investors for Innovation" />
+        <meta property="og:description" content="Discover Flow's mission to empower visionary entrepreneurs by connecting them with strategic investors. Learn how we facilitate funding, foster innovation, and drive economic growth in Kenya and across Africa." />
+        <meta property="og:url" content="https://flowfundsapp.co.ke/about" /> {/* IMPORTANT: Replace with the actual URL of your About Us page */}
+        <meta property="og:site_name" content="Flow" />
+        <meta property="og:type" content="website" />
+        {/* <meta property="og:image" content="https://flowfundsapp.co.ke/og-image-about.jpg" /> IMPORTANT: Create a specific image for your About Us page */}
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="About Flow: Connecting Visionaries with Capital" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Twitter Card Tags - For rich Twitter previews */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@yourFlowTwitterHandle" /> {/* IMPORTANT: Replace with your Twitter handle */}
+        <meta name="twitter:creator" content="@yourFlowTwitterHandle" /> {/* IMPORTANT: Replace with your Twitter handle */}
+        <meta name="twitter:title" content="About Flow | Bridging Startups & Investors for Innovation" />
+        <meta name="twitter:description" content="Discover Flow's mission to empower visionary entrepreneurs by connecting them with strategic investors. Learn how we facilitate funding, foster innovation, and drive economic growth in Kenya and across Africa." />
+        {/* <meta name="twitter:image" content="https://flowfundsapp.co.ke/twitter-image-about.jpg" /> IMPORTANT: Create a specific image for your About Us page */}
+        <meta name="twitter:image:alt" content="About Flow: Connecting Visionaries with Capital" />
+
+        {/* Canonical URL - Helps prevent duplicate content issues */}
+        <link rel="canonical" href="https://flowfundsapp.co.ke/about" /> {/* IMPORTANT: Replace with the actual canonical URL of this page */}
+
+        {/* Favicons (assuming these are in your public directory and consistent across pages) */}
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#0674B4" /> {/* Consistent brand color */}
+
+        {/* Viewport - Essential for responsive design */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        {/* Robots - Instructs search engine crawlers */}
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+        {/* Add any other specific meta tags if needed */}
       </Head>
       <main>
         {/* Hero Section */}
